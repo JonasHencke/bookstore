@@ -6,6 +6,7 @@ export default function Header() {
     <header>
       <Link className="page-logo" to="/">
         BookNook
+        <p>LIES DICH GLÜCKLICH</p>
       </Link>
       <nav>
         <NavLink

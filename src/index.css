@@ -2,14 +2,22 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background-color: #ECE2D2;
-    font-family: "Inter", sans-serif;
+    background-color: var(--color-3);
+    font-family: 'Roboto', sans-serif;
 }
 
 .page-layout{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+/* -------------------------------- */
+/* color properties */
+
+:root {
+    --color-1: #8B7E74;
+    --color-2: #C7BCA1;
+    --color-3: #ECE2D2;
 }
 
 /* -------------------------------- */
@@ -31,24 +39,33 @@ nav {
     justify-content: center;
     gap: 85px;
     padding: 1rem 0;
-    background-color: #C7BCA1;
+    background-color: var(--color-2);
     flex: 1;
     width: 100%
 }
 
 .page-logo {
  font-size: 32px;
- padding: 1.5rem 0;
- background-color: #8B7E74;
+ letter-spacing: 2px;
+ font-weight: 800;
+ padding: 2rem 0;
+ background-color: var(--color-1);
  text-align: center;
  width: 100%
+}
+
+.page-logo p {
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-top: -3px;
+    margin-left: 8px
 }
 
 /* -------------------------------- */
 /* Footer component */
 
 footer {
-    background-color: #8B7E74;
+    background-color: var(--color-1);
     padding: 2rem 0;
     text-align: center;
     margin-top: auto;
