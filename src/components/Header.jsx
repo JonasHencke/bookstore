@@ -3,11 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
-    <Link to="/">Testlink</Link>
-  );
-}
-
- /* <header>
+    <header>
       <Link className="page-logo" to="/">
         BookNook
       </Link>
@@ -28,4 +24,6 @@ export default function Header() {
           Kontakt
         </NavLink>
       </nav>
-    </header> */
+    </header>
+  );
+}

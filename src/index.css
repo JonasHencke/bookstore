@@ -1,0 +1,64 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ECE2D2;
+    font-family: "Inter", sans-serif;
+}
+
+.page-layout{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------------------------------- */
+/* Header component */
+
+header {
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+}
+
+header a {
+    color: rgba(0,0,0,0.5);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 85px;
+    padding: 1rem 0;
+    background-color: #C7BCA1;
+    flex: 1;
+    width: 100%
+}
+
+.page-logo {
+ font-size: 32px;
+ padding: 1.5rem 0;
+ background-color: #8B7E74;
+ text-align: center;
+ width: 100%
+}
+
+/* -------------------------------- */
+/* Footer component */
+
+footer {
+    background-color: #8B7E74;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: auto;
+}
+/* -------------------------------- */
+/* Outlet */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
