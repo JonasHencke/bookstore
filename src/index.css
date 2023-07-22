@@ -41,7 +41,8 @@ nav {
     padding: 1rem 0;
     background-color: var(--color-2);
     flex: 1;
-    width: 100%
+    width: 100%;
+    font-weight: 800;
 }
 
 .page-logo {
@@ -69,6 +70,55 @@ footer {
     padding: 2rem 0;
     text-align: center;
     margin-top: auto;
+}
+
+.newsletter-wrapper {
+    height: 150px;
+    background-color: var(--color-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.newsletter-wrapper h3 {
+    max-width: 200px;
+    letter-spacing: 2px;;
+}
+
+.newsletter-wrapper p {
+    max-width: 300px;
+    letter-spacing: 1px;
+}
+
+.newsletter-wrapper form {
+    display: flex;
+}
+.newsletter-wrapper input {
+    background-color: var(--color-3);
+    border: var(--color-2) 1px solid;
+    height: 25px;
+}
+
+.newsletter-button {
+    border: none;
+    width: 100px;
+    background-color: var(--color-2);
+    color: rgba(0,0,0,0.6)
+}
+
+.imprint {
+    height: 200px;
+    background-color: var(--color-2) ;
+    display: flex;
+    justify-content: center;
+}
+
+.imprint-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1000px;
 }
 /* -------------------------------- */
 /* Outlet */
