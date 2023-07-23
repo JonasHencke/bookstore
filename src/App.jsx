@@ -7,7 +7,7 @@ import About from "./pages/About"
 import EmptyPage from "./pages/EmptyPage"
 
 function App() {
-
+  
   return (
     <BrowserRouter>
       <Routes>
