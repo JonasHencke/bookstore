@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import Contact from "./pages/Contact"
 import Books from "./pages/Books"
 import About from "./pages/About"
+import EmptyPage from "./pages/EmptyPage"
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route path='about' element={<About/>}/>
           <Route path='contact' element={<Contact/>}/>
           <Route path='books' element={<Books/>}/>
+          <Route path="*" element={<EmptyPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

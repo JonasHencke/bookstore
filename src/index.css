@@ -70,6 +70,7 @@ footer {
     padding: 2rem 0;
     text-align: center;
     margin-top: auto;
+    color: rgba(0,0,0,0.6)
 }
 
 .newsletter-wrapper {
@@ -83,7 +84,8 @@ footer {
 
 .newsletter-wrapper h3 {
     max-width: 200px;
-    letter-spacing: 2px;;
+    letter-spacing: 2px;
+    color: rgba(0,0,0,0.6)
 }
 
 .newsletter-wrapper p {
@@ -112,6 +114,8 @@ footer {
     background-color: var(--color-2) ;
     display: flex;
     justify-content: center;
+    color: rgba(0,0,0,0.6)
+    
 }
 
 .imprint-flex {
@@ -169,5 +173,25 @@ main {
     max-width: 300px;
     width: 100%;
     letter-spacing: 1px;
+    color: rgba(0,0,0,0.7)
 }
 /* -------------------------------- */
+/* Error 404 page */
+
+.empty-page-wrapper {
+    max-width: 500px;
+    color: rgba(0,0,0,0.7);
+    margin: 200px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.empty-page-wrapper img {
+    width: 100%;
+}
+
+.empty-page-wrapper h2 {
+    width: 85%;
+    text-align: center;
+}
