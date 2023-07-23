@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom"
 
 export default function Footer() {
   return (
@@ -18,24 +19,24 @@ export default function Footer() {
       <div className="imprint-flex">
         <div className="imprint-container">
             <h3>Lorem ipsum</h3>
-            <p>vero eos et accusam</p>
-            <p>vero eos et accusam</p>
-            <p>vero eos et accusam</p>
-            <p>vero eos et accusam</p>
+            <NavLink to="/support">lorem</NavLink>
+            <NavLink to="/support">lorem</NavLink>
+            <NavLink to="/support">lorem</NavLink>
+            <NavLink to="/support">lorem</NavLink>
         </div>
         <div className="imprint-container">
             <h3>Lorem ipsum</h3>
-            <p>vero eos et accusam</p>
-            <p>vero eos et accusam</p>
-            <p>vero eos et accusam</p>
-            <p>vero eos et accusam</p>
+            <NavLink to="/support">lorem</NavLink>
+            <NavLink to="/support">lorem</NavLink>
+            <NavLink to="/support">lorem</NavLink>
+            <NavLink to="/support">lorem</NavLink>
         </div>
         <div className="imprint-container">
             <h3>Lorem ipsum</h3>
-            <p>vero eos et accusam</p>
-            <p>vero eos et accusam</p>
-            <p>vero eos et accusam</p>
-            <p>vero eos et accusam</p>
+            <NavLink to="/support">lorem</NavLink>
+            <NavLink to="/support">lorem</NavLink>
+            <NavLink to="/support">lorem</NavLink>
+            <NavLink to="/support">lorem</NavLink>
         </div>
         </div>
       </div>
