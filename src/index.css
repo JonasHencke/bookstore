@@ -207,13 +207,14 @@ main {
     letter-spacing: 1px;
     color: rgba(0,0,0,0.7)
 }
+
 /* -------------------------------- */
 /* Error 404 page */
 
 .empty-page-wrapper {
     max-width: 500px;
     color: rgba(0,0,0,0.7);
-    margin: 200px auto;
+    margin: 100px auto;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -226,4 +227,44 @@ main {
 .empty-page-wrapper h2 {
     width: 85%;
     text-align: center;
+}
+
+/* -------------------------------- */
+/* Books Component */
+.shop-display {
+    display: flex;
+    justify-content: center;
+}
+.book-display {
+    display: grid;
+    width: 75%;
+    margin: 10px 0;
+}
+
+.book-card {
+    display: flex;
+    align-items: center;
+    border-bottom: var(--color-1) solid 1px;
+    text-align: center;
+    font-size: 1.1rem
+}
+
+.book-card img {
+    margin: 10px 0;
+}
+
+.book-info {
+    margin: 0 auto
+}
+
+.warenkorb-Btn {
+    height: 30px;
+    width: 130px;
+    border: none;
+    background-color: var(--color-1);
+    color: var(--color-3)
+}
+
+.warenkorb-Btn:hover {
+    -webkit-filter: brightness(70%);
 }

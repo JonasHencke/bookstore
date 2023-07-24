@@ -13,12 +13,20 @@ export default function Books() {
     }, [])
 
     const displayedBooks = books.map(book => (
-        <div key={book.id}>
+        <div key={book.id} className="book-card">
             <img src={book.imageURL} style={{width: "200px"}}></img>
+            <div className="book-info">
+                <p style={{fontWeight: "300"}}>{book.author}</p>
+                <p style={{fontWeight: "500"}}>{book.title}</p>
+                <p style={{fontWeight: "500"}}>{book.price} €</p>
+                <button className="warenkorb-Btn">In den Warenkorb</button>
+            </div>
         </div>
     ))
     console.log(books)
     return(
-        <p>{displayedBooks}</p>
+        <div className="shop-display">
+            <div className="book-display">{displayedBooks}</div>
+        </div>
     )
 }
