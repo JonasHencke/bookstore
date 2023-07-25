@@ -232,15 +232,44 @@ main {
 /* -------------------------------- */
 /* Books Component */
 
+.search-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    margin: 2rem 0px;
+}
+
+.search-buttons a {
+    background-color: var(--color-1);
+    color: var(--color-3);
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.search-buttons a:hover {
+    -webkit-filter: brightness(90%);
+}
+
 .shop-display {
     display: flex;
     justify-content: center;
 }
 .book-display {
     display: grid;
-    width: 75%;
+    width: 95%;
     margin: 10px 0;
 }
+
+@media (min-width: 450px) {
+    .book-display {
+        width: 80%;
+        margin: 10px 0;
+    }
+  }
+
 
 .book-card {
     display: flex;
