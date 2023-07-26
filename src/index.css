@@ -253,6 +253,9 @@ main {
     -webkit-filter: brightness(90%);
 }
 
+.search-buttons .link-active {
+    background-color: rgba(0,0,0,0.6);
+}
 .shop-display {
     display: flex;
     justify-content: center;

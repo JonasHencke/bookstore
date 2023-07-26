@@ -34,12 +34,13 @@ export default function Books() {
   return (
     <>
       <div className="search-buttons">
-        <Link to="?type=fantasy">Fantasy</Link>
-        <Link to="?type=klassiker">Klassiker</Link>
-        <Link to="?type=sachbuch">Sachbuch</Link>
-        <Link to="?type=kinder und jugend">Kinder und Jugend</Link>
-        <Link to="?type=roman">Roman</Link>
-        <Link to="?type=krimi">Krimi</Link>
+        <Link to="?type=fantasy" className={typeFilter === "fantasy" ? "link-active" : ""}>Fantasy</Link>
+        <Link to="?type=klassiker" className={typeFilter === "klassiker" ? "link-active" : ""}>Klassiker</Link>
+        <Link to="?type=sachbuch" className={typeFilter === "sachbuch" ? "link-active" : ""}>Sachbuch</Link>
+        <Link to="?type=kinder und jugend" className={typeFilter === "kinder und jugend" ? "link-active" : ""}>Kinder und Jugend</Link>
+        <Link to="?type=roman" className={typeFilter === "roman" ? "link-active" : ""}>Roman</Link>
+        <Link to="?type=krimi" className={typeFilter === "krimi" ? "link-active" : ""}>Krimi</Link>
+        {typeFilter != null && <Link to="" style={{backgroundColor: "rgba(255,0,0,0.7)" }}>Filter entfernen</Link>}
       </div>
       <div className="shop-display">
         <div className="book-display">{displayedBooks}</div>
