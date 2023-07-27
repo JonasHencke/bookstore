@@ -2,7 +2,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--color-3);
+    background-color: var(--color-white);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -18,6 +18,9 @@ body {
     --color-1: #8B7E74;
     --color-2: #C7BCA1;
     --color-3: #ECE2D2;
+    --color-white: #F9F6F0;
+    --color-brown: #8B7E74;
+    --color-turquoise: #479689;
 }
 
 /* -------------------------------- */
@@ -30,7 +33,7 @@ header {
 }
 
 header a {
-    color: rgba(0,0,0,0.5);
+    color: var(--color-brown);
     text-decoration: none;
 }
 
@@ -39,18 +42,21 @@ nav {
     justify-content: center;
     gap: 10%;
     padding: 1rem 0;
-    background-color: var(--color-2);
+    background-color: var(--color-brown);
     flex: 1;
     width: 100%;
     font-weight: 800;
 }
 
+.header-menu a {
+    color: var(--color-white)
+}
 .page-logo {
  font-size: 32px;
  letter-spacing: 2px;
  font-weight: 800;
  padding: 2rem 0;
- background-color: var(--color-1);
+ background-color: var(--color-white);
  text-align: center;
  width: 100%
 }
@@ -66,21 +72,22 @@ nav {
 /* Footer component */
 
 footer {
-    background-color: var(--color-1);
+    background-color: var(--color-brown);
     padding: 2rem 0;
     text-align: center;
     margin-top: auto;
-    color: rgba(0,0,0,0.6)
+    color: var(--color-white)
 }
 
 .newsletter-wrapper {
-    background-color: var(--color-1);
+    background-color: var(--color-brown);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10%;
     padding: 30px 0;
+    color: var(--color-white);
 }
 
 @media (min-width: 1000px) {
@@ -93,7 +100,7 @@ footer {
     margin: 0px;
     max-width: 200px;
     letter-spacing: 2px;
-    color: rgba(0,0,0,0.6);
+    color: var(--color-white);
     text-align: center;
 }
 
@@ -108,23 +115,24 @@ footer {
     display: flex;
 }
 .newsletter-wrapper input {
-    background-color: var(--color-3);
-    border: var(--color-2) 1px solid;
+    background-color: var(--color-white);
+    border: var(--color-white) 1px solid;
     height: 25px;
 }
 
 .newsletter-button {
     border: none;
     width: 100px;
-    background-color: var(--color-2);
-    color: rgba(0,0,0,0.6)
+    background-color: var(--color-turquoise);
+    color: var(--color-white);
+    letter-spacing: 1px;
 }
 
 .imprint {
-    background-color: var(--color-2) ;
+    background-color: var(--color-white) ;
     display: flex;
     justify-content: center;
-    color: rgba(0,0,0,0.6)
+    color: var(--color-brown)
     
 }
 
@@ -153,18 +161,9 @@ footer {
   }
 
   .imprint-container a {
-    color: rgba(0,0,0,0.6);
+    color: var(--color-brown);
     text-decoration: none;
   }
-/* -------------------------------- */
-/* Outlet */
-
-main {
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto; */
-}
 
 /* -------------------------------- */
 /* Home page */
@@ -182,21 +181,22 @@ main {
 
 .banner-button {
     position: absolute;
-    color: var(--color-3);
+    color: var(--color-white);
     font-size: 15px;
     right: 20%;
     bottom: 40px;
     border: none;
-    background-color: var(--color-1);
+    background-color: var(--color-turquoise);
     padding: 12px 40px;
     cursor: pointer;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
+    letter-spacing: 2px;
 }
 
 .banner-button:hover {
-    background: var(--color-2);
+    -webkit-filter: brightness(90%);
   }
 
 .text-block {
@@ -205,7 +205,7 @@ main {
     max-width: 300px;
     width: 100%;
     letter-spacing: 1px;
-    color: rgba(0,0,0,0.7)
+    color: var(--color-brown)
 }
 
 /* -------------------------------- */
@@ -213,7 +213,7 @@ main {
 
 .empty-page-wrapper {
     max-width: 500px;
-    color: rgba(0,0,0,0.7);
+    color: var(--color-brown);
     margin: 100px auto;
     display: flex;
     align-items: center;
@@ -242,8 +242,8 @@ main {
 }
 
 .search-buttons a {
-    background-color: var(--color-1);
-    color: var(--color-3);
+    background-color: var(--color-brown);
+    color: var(--color-white);
     padding: 0.5em 1em;
     border-radius: 10px;
     text-decoration: none;
@@ -254,7 +254,14 @@ main {
 }
 
 .search-buttons .link-active {
-    background-color: rgba(0,0,0,0.6);
+    background-color: var(--color-turquoise);
+    color: var(--color-white);
+}
+
+.search-buttons .link-remove {
+    background-color: var(--color-white);
+    color: var(--color-brown);
+    outline: var(--color-brown) 1px solid;
 }
 .shop-display {
     display: flex;
@@ -273,11 +280,10 @@ main {
     }
   }
 
-
 .book-card {
     display: flex;
     align-items: center;
-    border-bottom: var(--color-1) solid 1px;
+    border-bottom: var(--color-brown) solid 1px;
     text-align: start;
     font-size: 1.1rem;
     gap: 10px
@@ -297,15 +303,16 @@ main {
     flex-direction: column;
     align-items: start;
     width: 50%;
-    max-width: 400px
+    max-width: 400px;
+    color: #776154;
 }
 
 .warenkorb-Btn {
     height: 30px;
     width: 130px;
     border: none;
-    background-color: var(--color-1);
-    color: var(--color-3);
+    background-color: var(--color-turquoise);
+    color: var(--color-white);
     align-self: end;
 }
 

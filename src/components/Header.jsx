@@ -8,7 +8,7 @@ export default function Header() {
         BookNook
         <p>LIES DICH GLÜCKLICH</p>
       </Link>
-      <nav>
+      <nav className="header-menu">
         <NavLink
           to="/books"
         >
