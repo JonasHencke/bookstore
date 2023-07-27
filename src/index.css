@@ -260,8 +260,8 @@ footer {
 
 .search-buttons .link-remove {
     background-color: var(--color-white);
-    color: var(--color-brown);
-    outline: var(--color-brown) 1px solid;
+    color: var(--color-turquoise);
+    outline: var(--color-turquoise) 1px solid;
 }
 .shop-display {
     display: flex;
@@ -286,7 +286,8 @@ footer {
     border-bottom: var(--color-brown) solid 1px;
     text-align: start;
     font-size: 1.1rem;
-    gap: 10px
+    gap: 10px;
+    padding: 20px 0;
 }
 
 .book-card:last-child {
@@ -295,6 +296,8 @@ footer {
 
 .book-card img {
     margin: 10px 0;
+    max-width: 40%;
+    height: auto;
 }
 
 .book-info {
