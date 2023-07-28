@@ -15,12 +15,18 @@ body {
 /* color properties */
 
 :root {
-    --color-1: #8B7E74;
-    --color-2: #C7BCA1;
-    --color-3: #ECE2D2;
     --color-white: #F9F6F0;
     --color-brown: #8B7E74;
     --color-turquoise: #479689;
+}
+
+/* -------------------------------- */
+/* font sizes */
+
+:root {
+    --fs-xl: clamp(2rem, 12vw, 2.5rem);
+    --fs-m: 1.5rem;
+    --fs-s: 1rem;
 }
 
 /* -------------------------------- */
@@ -52,7 +58,7 @@ nav {
     color: var(--color-white)
 }
 .page-logo {
- font-size: 32px;
+ font-size: var(--fs-xl);
  letter-spacing: 2px;
  font-weight: 800;
  padding: 2rem 0;
@@ -62,7 +68,7 @@ nav {
 }
 
 .page-logo p {
-    font-size: 13px;
+    font-size: var(--fs-s);
     letter-spacing: 4px;
     margin-top: -3px;
     margin-left: 8px
@@ -182,8 +188,8 @@ footer {
 .banner-button {
     position: absolute;
     color: var(--color-white);
-    font-size: 15px;
-    right: 20%;
+    font-size: var(--fs-s);
+    right: 13%;
     bottom: 40px;
     border: none;
     background-color: var(--color-turquoise);
@@ -275,7 +281,14 @@ footer {
 
 @media (min-width: 450px) {
     .book-display {
-        width: 80%;
+        width: 75%;
+        margin: 10px 0;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .book-display {
+        width: 55%;
         margin: 10px 0;
     }
   }
@@ -285,7 +298,7 @@ footer {
     align-items: center;
     border-bottom: var(--color-brown) solid 1px;
     text-align: start;
-    font-size: 1.1rem;
+    font-size: var(--fs-m);
     gap: 10px;
     padding: 20px 0;
 }
@@ -305,9 +318,14 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: start;
+    gap: 1em;
     width: 50%;
     max-width: 400px;
     color: #776154;
+}
+
+.book-info p {
+    margin: 0px;
 }
 
 .warenkorb-Btn {
