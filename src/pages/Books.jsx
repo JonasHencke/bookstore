@@ -23,7 +23,7 @@ export default function Books() {
 
   const booksPerPage = 5;
   const pagesVisited = pageNumber * booksPerPage;
-  const pageCount = Math.ceil(filteredBooks.length / booksPerPage);
+  let pageCount = Math.ceil(filteredBooks.length / booksPerPage);
   const changePage = ({ selected }) => {
     setPageNumber(selected);
     window.scrollTo(0, 0)
@@ -108,6 +108,7 @@ export default function Books() {
           disabledClassName={"pagination-disabled"}
           activeLinkClassName={"pagination-active"}
           pageLinkClassName={"pagination-item"}
+          forcePage={pageNumber}
         />
       </div>
     </>
