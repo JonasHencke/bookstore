@@ -10,7 +10,7 @@ export default function Header() {
       </Link>
       <nav className="header-menu">
         <NavLink
-          to="/books"
+          to="/books?page=1"
         >
           Bücher
         </NavLink>

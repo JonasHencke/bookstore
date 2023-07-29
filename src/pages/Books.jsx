@@ -6,7 +6,7 @@ import { Link, useSearchParams } from "react-router-dom";
 export default function Books() {
   const [books, setBooks] = React.useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
-  const [pageNumber, setPageNumber] = React.useState(0);
+  const [pageNumber, setPageNumber] = React.useState(searchParams.get("page")-1);
   
   React.useEffect(() => {
     async function loadBooks() {
@@ -21,10 +21,11 @@ export default function Books() {
     ? books.filter((book) => book.genre.toLowerCase() === typeFilter)
     : books;
 
-  const booksPerPage = 5;
+  const booksPerPage = 1;
   const pagesVisited = pageNumber * booksPerPage;
   let pageCount = Math.ceil(filteredBooks.length / booksPerPage);
   const changePage = ({ selected }) => {
+    setSearchParams(typeFilter ? {type: typeFilter, page: selected + 1} : {page: selected + 1})
     setPageNumber(selected);
     window.scrollTo(0, 0)
   };
@@ -47,42 +48,42 @@ export default function Books() {
     <>
       <div className="search-buttons">
         <Link
-          to="?type=fantasy"
+          to="?type=fantasy&page=1"
           className={typeFilter === "fantasy" ? "link-active" : ""}
           onClick={() => setPageNumber(0)}
         >
           Fantasy
         </Link>
         <Link
-          to="?type=klassiker"
+          to="?type=klassiker&page=1"
           className={typeFilter === "klassiker" ? "link-active" : ""}
           onClick={() => setPageNumber(0)}
         >
           Klassiker
         </Link>
         <Link
-          to="?type=sachbuch"
+          to="?type=sachbuch&page=1"
           className={typeFilter === "sachbuch" ? "link-active" : ""}
           onClick={() => setPageNumber(0)}
         >
           Sachbuch
         </Link>
         <Link
-          to="?type=kinder und jugend"
+          to="?type=kinder und jugend&page=1"
           className={typeFilter === "kinder und jugend" ? "link-active" : ""}
           onClick={() => setPageNumber(0)}
         >
           Kinder und Jugend
         </Link>
         <Link
-          to="?type=roman"
+          to="?type=roman&page=1"
           className={typeFilter === "roman" ? "link-active" : ""}
           onClick={() => setPageNumber(0)}
         >
           Roman
         </Link>
         <Link
-          to="?type=krimi"
+          to="?type=krimi&page=1"
           className={typeFilter === "krimi" ? "link-active" : ""}
           onClick={() => setPageNumber(0)}
         >
