@@ -1,11 +1,13 @@
 import React from "react";
+import ReactPaginate from "react-paginate";
 import { getBooks } from "../server.jsx";
 import { Link, useSearchParams } from "react-router-dom";
 
 export default function Books() {
   const [books, setBooks] = React.useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
-
+  const [pageNumber, setPageNumber] = React.useState(0);
+  
   React.useEffect(() => {
     async function loadBooks() {
       let data = await getBooks();
@@ -19,17 +21,27 @@ export default function Books() {
     ? books.filter((book) => book.genre.toLowerCase() === typeFilter)
     : books;
 
-  const displayedBooks = filteredBooks.map((book) => (
-    <div key={book.id} className="book-card">
-      <img src={book.imageURL} style={{ width: "200px" }}></img>
-      <div className="book-info">
-        <p style={{ fontWeight: "300" }}>{book.author}</p>
-        <p style={{ fontWeight: "500" }}>{book.title}</p>
-        <p style={{ fontWeight: "500" }}>{book.price} €</p>
-        <button className="warenkorb-Btn">In den Warenkorb</button>
+  const booksPerPage = 3;
+  const pagesVisited = pageNumber * booksPerPage;
+  const pageCount = Math.ceil(filteredBooks.length / booksPerPage);
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+    window.scrollTo(0, 0)
+  };
+
+  const displayBooks = filteredBooks
+    .slice(pagesVisited, pagesVisited + booksPerPage)
+    .map((book) => (
+      <div key={book.id} className="book-card">
+        <img src={book.imageURL} style={{ width: "200px" }}></img>
+        <div className="book-info">
+          <p style={{ fontWeight: "300" }}>{book.author}</p>
+          <p style={{ fontWeight: "500" }}>{book.title}</p>
+          <p style={{ fontWeight: "500" }}>{book.price} €</p>
+          <button className="warenkorb-Btn">In den Warenkorb</button>
+        </div>
       </div>
-    </div>
-  ));
+    ));
 
   return (
     <>
@@ -77,7 +89,17 @@ export default function Books() {
         )}
       </div>
       <div className="shop-display">
-        <div className="book-display">{displayedBooks}</div>
+        <div className="book-display">{displayBooks}</div>
+        <ReactPaginate
+          previousLabel={"Vorherige Seite"}
+          nextLabel={"Nächste Seite"}
+          pageCount={pageCount}
+          onPageChange={changePage}
+          containerClassName={"pagination"}
+          previousClassName={"pagination-previous"}
+          nextLinkClassName={"pagination-next"}
+          disabledClassName={"pagination-disabled"}
+        />
       </div>
     </>
   );
