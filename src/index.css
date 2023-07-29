@@ -274,7 +274,9 @@ footer {
 }
 .shop-display {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .book-display {
     display: grid;
@@ -342,4 +344,29 @@ footer {
 
 .warenkorb-Btn:hover {
     -webkit-filter: brightness(90%);
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    gap: 3em;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.pagination-item {
+ background-color: var(--color-brown);
+ padding: 0.3em 0.8em;
+ border-radius: 10px;
+ color: var(--color-white);
+}
+
+.pagination-active {
+ background-color: var(--color-white);
+ color: var(--color-turquoise);
+ outline: var(--color-turquoise) 2px solid;
+}
+
+.pagination-disabled {
+    display: none
 }

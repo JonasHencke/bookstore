@@ -21,7 +21,7 @@ export default function Books() {
     ? books.filter((book) => book.genre.toLowerCase() === typeFilter)
     : books;
 
-  const booksPerPage = 3;
+  const booksPerPage = 5;
   const pagesVisited = pageNumber * booksPerPage;
   const pageCount = Math.ceil(filteredBooks.length / booksPerPage);
   const changePage = ({ selected }) => {
@@ -49,41 +49,48 @@ export default function Books() {
         <Link
           to="?type=fantasy"
           className={typeFilter === "fantasy" ? "link-active" : ""}
+          onClick={() => setPageNumber(0)}
         >
           Fantasy
         </Link>
         <Link
           to="?type=klassiker"
           className={typeFilter === "klassiker" ? "link-active" : ""}
+          onClick={() => setPageNumber(0)}
         >
           Klassiker
         </Link>
         <Link
           to="?type=sachbuch"
           className={typeFilter === "sachbuch" ? "link-active" : ""}
+          onClick={() => setPageNumber(0)}
         >
           Sachbuch
         </Link>
         <Link
           to="?type=kinder und jugend"
           className={typeFilter === "kinder und jugend" ? "link-active" : ""}
+          onClick={() => setPageNumber(0)}
         >
           Kinder und Jugend
         </Link>
         <Link
           to="?type=roman"
           className={typeFilter === "roman" ? "link-active" : ""}
+          onClick={() => setPageNumber(0)}
         >
           Roman
         </Link>
         <Link
           to="?type=krimi"
           className={typeFilter === "krimi" ? "link-active" : ""}
+          onClick={() => setPageNumber(0)}
         >
           Krimi
         </Link>
         {typeFilter != null && (
-          <Link to="" className="link-remove">
+          <Link to="" className="link-remove"
+          onClick={() => setPageNumber(0)}>
             Filter entfernen
           </Link>
         )}
@@ -91,14 +98,16 @@ export default function Books() {
       <div className="shop-display">
         <div className="book-display">{displayBooks}</div>
         <ReactPaginate
-          previousLabel={"Vorherige Seite"}
-          nextLabel={"Nächste Seite"}
+          previousLabel={"<"}
+          nextLabel={">"}
           pageCount={pageCount}
           onPageChange={changePage}
           containerClassName={"pagination"}
-          previousClassName={"pagination-previous"}
-          nextLinkClassName={"pagination-next"}
+          previousClassName={"pagination-item"}
+          nextLinkClassName={"pagination-item"}
           disabledClassName={"pagination-disabled"}
+          activeLinkClassName={"pagination-active"}
+          pageLinkClassName={"pagination-item"}
         />
       </div>
     </>
