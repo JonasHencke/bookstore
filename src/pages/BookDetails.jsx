@@ -1,5 +1,5 @@
 import React from "react"
-import { useLocation, useParams } from "react-router-dom"
+import { useLocation, useParams, Link } from "react-router-dom"
 import { getBooks } from "../server.jsx";
 
 export default function BookDetails() {
@@ -16,9 +16,10 @@ export default function BookDetails() {
         }
         loadBooks();
       }, [id]);
-      console.log(location.pathname)
+      console.log(location.state.search)
     return (
       <>
+        <Link to={`/books/${location.state.search}`}>← Zurück</Link>
         <div className="bookdetails-container">
         <img src={book.imageURL} className="bookdetails-image"/>
         <div className="bookdetails-information">
