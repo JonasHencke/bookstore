@@ -371,3 +371,45 @@ footer {
 .pagination-disabled {
     display: none
 }
+
+/* -------------------------------- */
+/* BookDetails Component */
+
+.bookdetails-container {
+    display: flex;
+    justify-content:space-between;
+    margin: 3em 0;
+}
+
+.bookdetails-image {
+    max-width: 35%;
+    height: auto;
+    margin: auto;
+}
+
+.bookdetails-information {
+    max-width: 45%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.bookdetails-title {
+
+}
+
+.bookdetails-author {
+    
+}
+
+.bookdetails-description {
+    max-width: 400px;
+}
+
+.bookdetails-title {
+    
+}
+
+.bookdetails-title {
+    
+}

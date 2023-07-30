@@ -46,6 +46,7 @@ export default function Books() {
             search: `?${searchParams.toString()}`,
             type: typeFilter,
           }}
+          onClick={() => window.scrollTo(0, 0)}
         >
           <img src={book.imageURL} style={{ width: "200px" }}></img>
           <div className="book-info">
