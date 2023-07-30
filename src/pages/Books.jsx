@@ -6,8 +6,10 @@ import { Link, useSearchParams } from "react-router-dom";
 export default function Books() {
   const [books, setBooks] = React.useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
-  const [pageNumber, setPageNumber] = React.useState(searchParams.get("page")-1);
-  
+  const [pageNumber, setPageNumber] = React.useState(
+    searchParams.get("page") - 1
+  );
+
   React.useEffect(() => {
     async function loadBooks() {
       let data = await getBooks();
@@ -21,26 +23,38 @@ export default function Books() {
     ? books.filter((book) => book.genre.toLowerCase() === typeFilter)
     : books;
 
-  const booksPerPage = 1;
+  const booksPerPage = 8;
   const pagesVisited = pageNumber * booksPerPage;
   let pageCount = Math.ceil(filteredBooks.length / booksPerPage);
   const changePage = ({ selected }) => {
-    setSearchParams(typeFilter ? {type: typeFilter, page: selected + 1} : {page: selected + 1})
+    setSearchParams(
+      typeFilter
+        ? { type: typeFilter, page: selected + 1 }
+        : { page: selected + 1 }
+    );
     setPageNumber(selected);
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   };
 
   const displayBooks = filteredBooks
     .slice(pagesVisited, pagesVisited + booksPerPage)
     .map((book) => (
       <div key={book.id} className="book-card">
-        <img src={book.imageURL} style={{ width: "200px" }}></img>
-        <div className="book-info">
-          <p style={{ fontWeight: "300" }}>{book.author}</p>
-          <p style={{ fontWeight: "500" }}>{book.title}</p>
-          <p style={{ fontWeight: "500" }}>{book.price} €</p>
-          <button className="warenkorb-Btn">In den Warenkorb</button>
-        </div>
+        <Link
+          to={book.id}
+          state={{
+            search: `?${searchParams.toString()}`,
+            type: typeFilter,
+          }}
+        >
+          <img src={book.imageURL} style={{ width: "200px" }}></img>
+          <div className="book-info">
+            <p style={{ fontWeight: "300" }}>{book.author}</p>
+            <p style={{ fontWeight: "500" }}>{book.title}</p>
+            <p style={{ fontWeight: "500" }}>{book.price} €</p>
+            <button className="warenkorb-Btn">In den Warenkorb</button>
+          </div>
+        </Link>
       </div>
     ));
 
@@ -90,8 +104,7 @@ export default function Books() {
           Krimi
         </Link>
         {typeFilter != null && (
-          <Link to="" className="link-remove"
-          onClick={() => setPageNumber(0)}>
+          <Link to="?page=1" className="link-remove" onClick={() => setPageNumber(0)}>
             Filter entfernen
           </Link>
         )}
