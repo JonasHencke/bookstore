@@ -190,6 +190,7 @@ footer {
 
 .banner-button {
     position: absolute;
+    text-decoration: none;
     color: var(--color-white);
     font-size: var(--fs-s);
     right: 13%;

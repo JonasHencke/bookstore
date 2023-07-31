@@ -1,12 +1,13 @@
 import React from "react";
 import banner from "../images/banner.jpeg";
+import { Link } from "react-router-dom"
 
 export default function Home() {
   return (
     <>
       <div className="banner-container">
         <img className="banner-img" src={banner}></img>
-        <button className="banner-button">Shop</button>
+        <Link className="banner-button" to="/books?page=1">Shop</Link>
       </div>
       <div className="text-block">
         <h2>Lorem ipsum dolor</h2>
