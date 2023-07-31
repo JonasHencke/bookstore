@@ -394,10 +394,10 @@ footer {
 }
 
 .bookdetails-image {
-    width: 35%;
-    max-width: 504px;
+    width: 30%;
     height: auto;
     margin: auto;
+    margin-top: 0px;
     margin-right: 0px;
 }
 
@@ -440,3 +440,22 @@ footer {
 .bookdetails-title {
     
 }
+@media (max-width: 900px) {
+    .bookdetails-container {
+        flex-direction: column;
+    }
+    
+    .bookdetails-image {
+        margin: auto;
+        width: 70%;
+        max-width: 450px;
+        
+    }
+    
+    .bookdetails-information {
+        width: 70%;
+        max-width: 450px
+    }
+    
+}
+
