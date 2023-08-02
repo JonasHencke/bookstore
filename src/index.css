@@ -378,13 +378,13 @@ footer {
 
 .bookdetails-backlink {
     display: inline-block;
-    font-size: 20px;
+    font-size: var(--fs-m);
     margin-top: 2em;
     margin-left: 9%;
     text-decoration: none;
     color: var(--color-turquoise);
     font-weight: 800;
-    border-bottom: var(--color-turquoise) 1px solid;
+    /* border-bottom: var(--color-turquoise) 1px solid; */
 }
 
 .bookdetails-container {
@@ -457,5 +457,8 @@ footer {
         max-width: 450px
     }
     
+    .bookdetails-backlink {
+        font-size: var(--fs-s);
+    }
 }
 

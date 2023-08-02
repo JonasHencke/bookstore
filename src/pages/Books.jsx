@@ -2,8 +2,10 @@ import React from "react";
 import ReactPaginate from "react-paginate";
 import { getBooks } from "../server.jsx";
 import { Link, useSearchParams } from "react-router-dom";
+import { ThemeContext } from "../App.jsx";
 
 export default function Books() {
+  const { shoppingCart,addItemToCart } = React.useContext(ThemeContext)
   const [books, setBooks] = React.useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const [pageNumber, setPageNumber] = React.useState(
@@ -46,14 +48,16 @@ export default function Books() {
             search: `?${searchParams.toString()}`,
             type: typeFilter,
           }}
-          onClick={() => window.scrollTo(0, 0)}
         >
           <img src={book.imageURL} style={{ width: "200px" }}></img>
           <div className="book-info">
             <p style={{ fontWeight: "300" }}>{book.author}</p>
             <p style={{ fontWeight: "500" }}>{book.title}</p>
             <p style={{ fontWeight: "500" }}>{book.price} €</p>
-            <button className="warenkorb-Btn">In den Warenkorb</button>
+            <button className="warenkorb-Btn" onClick={(e) => {
+              addItemToCart(book.id, book.author, book.title, book.price);
+              e.preventDefault()
+            }}>In den Warenkorb</button>
           </div>
         </Link>
       </div>
