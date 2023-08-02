@@ -5,7 +5,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { ThemeContext } from "../App.jsx";
 
 export default function Books() {
-  const { shoppingCart,addItemToCart } = React.useContext(ThemeContext)
+  const { addItemToCart } = React.useContext(ThemeContext)
   const [books, setBooks] = React.useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const [pageNumber, setPageNumber] = React.useState(
@@ -55,7 +55,7 @@ export default function Books() {
             <p style={{ fontWeight: "500" }}>{book.title}</p>
             <p style={{ fontWeight: "500" }}>{book.price} €</p>
             <button className="warenkorb-Btn" onClick={(e) => {
-              addItemToCart(book.id, book.author, book.title, book.price);
+              addItemToCart(book);
               e.preventDefault()
             }}>In den Warenkorb</button>
           </div>

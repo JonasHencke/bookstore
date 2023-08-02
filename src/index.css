@@ -42,6 +42,30 @@ header a {
     color: var(--color-brown);
     text-decoration: none;
 }
+.page-logo {
+    font-size: var(--fs-xl);
+    letter-spacing: 2px;
+    font-weight: 800;
+    padding: 2rem 0;
+    background-color: var(--color-white);
+    text-align: center;
+    width: 100%;
+    position: relative;
+   }
+
+.shoppingCart-icon {
+    width: 30px;
+    position: absolute;
+    top: 37%;
+    right: 3%
+}
+
+@media (max-width: 400px) {
+    .shoppingCart-icon {
+        width: 25px;
+        top: 12px
+    }
+}
 
 nav {
     display: flex;
@@ -56,15 +80,6 @@ nav {
 
 .header-menu a {
     color: var(--color-white)
-}
-.page-logo {
- font-size: var(--fs-xl);
- letter-spacing: 2px;
- font-weight: 800;
- padding: 2rem 0;
- background-color: var(--color-white);
- text-align: center;
- width: 100%
 }
 
 .page-logo p {

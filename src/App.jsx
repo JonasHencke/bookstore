@@ -13,10 +13,10 @@ const ThemeContext = React.createContext();
 function App() {  
   const [shoppingCart, setShoppingCart] = React.useState([])
 
-  function addItemToCart(id, author, title, price) {
+  function addItemToCart(book) {
     setShoppingCart([
-      ...shoppingCart,
-      {id: id, author: author, title: title, price: price }
+      book,
+      ...shoppingCart
     ]
     );
     console.log(shoppingCart)
