@@ -1,7 +1,7 @@
 import React from "react";
 import ReactPaginate from "react-paginate";
 import { getBooks } from "../server.jsx";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams} from "react-router-dom";
 import { ThemeContext } from "../App.jsx";
 
 export default function Books() {

@@ -16,7 +16,7 @@ export default function BookDetails() {
         }
         loadBooks();
       }, [id]);
-      console.log(location.state.search)
+
     return (
       <>
         <Link className="bookdetails-backlink" to={`/books/${location.state.search}`}>← Zurück</Link>

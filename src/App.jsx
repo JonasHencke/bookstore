@@ -11,8 +11,8 @@ import EmptyPage from "./pages/EmptyPage"
 const ThemeContext = React.createContext();
 
 function App() {  
-  const [shoppingCart, setShoppingCart] = React.useState([])
-
+  const [shoppingCart, setShoppingCart] = React.useState([]);
+  
   function addItemToCart(book) {
     setShoppingCart([
       book,

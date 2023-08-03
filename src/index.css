@@ -73,9 +73,11 @@ header a {
 }
 
 @media (max-width: 400px) {
+    .shoppingCart-wrapper {
+        top: 12px
+    }
     .shoppingCart-icon {
         width: 25px;
-        top: 12px
     }
 }
 
