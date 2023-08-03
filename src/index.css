@@ -422,6 +422,17 @@ footer {
     margin: 3em 0;
 }
 
+.bookdetails-img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bookdetails-img-container .warenkorb-Btn {
+    align-self: center;
+    margin: 1.5em 0;
+}
+
 .bookdetails-image {
     width: 30%;
     height: auto;

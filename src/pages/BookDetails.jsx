@@ -1,9 +1,11 @@
 import React from "react"
 import { useLocation, useParams, Link } from "react-router-dom"
 import { getBooks } from "../server.jsx";
+import { ThemeContext } from "../App.jsx";
 
 export default function BookDetails() {
     const [book, setBook] = React.useState([]);
+    const { addItemToCart } = React.useContext(ThemeContext)
     const location = useLocation()
     const { id } = useParams()
   
@@ -26,6 +28,10 @@ export default function BookDetails() {
           <h1 className="bookdetails-title">{book.title}</h1>
           <h2 className="bookdetails-author">{book.author}</h2>
           <h2 className="bookdetails-price">Preis: {book.price} €</h2>
+          <button className="warenkorb-Btn" style={{alignSelf:"start", marginBottom:"1em"}} onClick={(e) => {
+              addItemToCart(book);
+              e.preventDefault()
+            }}>In den Warenkorb</button>
           <p className="bookdetails-genre">Genre: {book.genre}</p>
           <p className="bookdetails-pages">Seitenanzahl: {book.pages}</p>
           <p className="bookdetails-releaseDate">Erscheinungsdatum: {book.releaseDate}</p>
