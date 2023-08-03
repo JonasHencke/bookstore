@@ -17,8 +17,10 @@ export default function Header() {
         BookNook
         <p>LIES DICH GLÜCKLICH</p>
         <div className="shoppingCart-wrapper">
+          <NavLink to="/shoppingcart">
           <img className="shoppingCart-icon" src={ShoppingCartSVG} />
           <p className="cart-counter">{shoppingCart != 0 && shoppingCart.length }</p>
+          </NavLink>
         </div>
       </Link>
       <nav className="header-menu">

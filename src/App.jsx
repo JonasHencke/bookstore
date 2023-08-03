@@ -7,6 +7,7 @@ import Books from "./pages/Books"
 import BookDetails from './pages/BookDetails'
 import About from "./pages/About"
 import EmptyPage from "./pages/EmptyPage"
+import ShoppingCart from "./pages/ShoppingCart"
 
 const ThemeContext = React.createContext();
 
@@ -32,6 +33,7 @@ function App() {
           <Route path='contact' element={<Contact/>}/>
           <Route path='books' element={<Books/>}/>
           <Route path='books/:id' element={<BookDetails/>}/>
+          <Route path='shoppingcart' element={<ShoppingCart/>}/>
           <Route path="*" element={<EmptyPage />} />
         </Route>
       </Routes>
