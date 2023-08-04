@@ -5,38 +5,37 @@ export default function Footer() {
   return (
     <>
       <div className="newsletter-wrapper">
-        <h3>LOREM IPSUM DOLOR SIT AMET CONSETETUR</h3>
+        <h3>Erhalte regelmäßig Neuigkeiten über BookNooks</h3>
         <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+          Melde dich für unseren Newsletter an und erhalte bei deiner nächsten Bestellung 10% Rabatt
         </p>
         <form>
-            <input></input>
+            <input className="newsletter-input" type="email"></input>
             <button className="newsletter-button">SUBSCRIBE</button>
         </form>
       </div>
       <div className="imprint">
       <div className="imprint-flex">
         <div className="imprint-container">
-            <h3>Lorem ipsum</h3>
-            <NavLink to="/support">lorem</NavLink>
-            <NavLink to="/support">lorem</NavLink>
-            <NavLink to="/support">lorem</NavLink>
-            <NavLink to="/support">lorem</NavLink>
+            <h3>Über BookNook</h3>
+            <NavLink to="/support">Das Unternehmen</NavLink>
+            <NavLink to="/support">Karriere</NavLink>
+            <NavLink to="/support">Impressum</NavLink>
+            <NavLink to="/support">AGB</NavLink>
         </div>
         <div className="imprint-container">
-            <h3>Lorem ipsum</h3>
-            <NavLink to="/support">lorem</NavLink>
-            <NavLink to="/support">lorem</NavLink>
-            <NavLink to="/support">lorem</NavLink>
-            <NavLink to="/support">lorem</NavLink>
+            <h3>Kundenservice</h3>
+            <NavLink to="/support">Hilfe</NavLink>
+            <NavLink to="/support">Kontakt</NavLink>
+            <NavLink to="/support">Rücknahmen</NavLink>
+            <NavLink to="/support">Downloadcode einlösen</NavLink>
         </div>
         <div className="imprint-container">
-            <h3>Lorem ipsum</h3>
-            <NavLink to="/support">lorem</NavLink>
-            <NavLink to="/support">lorem</NavLink>
-            <NavLink to="/support">lorem</NavLink>
-            <NavLink to="/support">lorem</NavLink>
+            <h3>Rund um den Einkauf</h3>
+            <NavLink to="/support">Benutzerdaten</NavLink>
+            <NavLink to="/support">Fragen zur Bestellung</NavLink>
+            <NavLink to="/support">Kaufen</NavLink>
+            <NavLink to="/support">Versand und Lieferung</NavLink>
         </div>
         </div>
       </div>
