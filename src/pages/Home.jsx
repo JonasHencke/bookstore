@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <div className="banner-container">
         <img className="banner-img" src={banner}></img>
-        <Link className="banner-button" to="/books?page=1">Shop</Link>
+        <Link className="banner-button" to="/books?page=1">Einkaufen</Link>
       </div>
       <div className="text-block">
         <h2>Lorem ipsum dolor</h2>

@@ -93,7 +93,8 @@ nav {
 }
 
 .header-menu a {
-    color: var(--color-white)
+    color: var(--color-white);
+    letter-spacing: 2px;
 }
 
 .page-logo p {
@@ -199,6 +200,9 @@ footer {
     gap: 5px;
     gap: 0.7em;
   }
+.imprint-container h3 {
+    border-bottom: var(--color-brown) 2px solid;
+}
 
 @media (max-width: 765px) {
     .imprint-flex {

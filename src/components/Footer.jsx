@@ -11,7 +11,7 @@ export default function Footer() {
         </p>
         <form>
             <input className="newsletter-input" type="email"></input>
-            <button className="newsletter-button">SUBSCRIBE</button>
+            <button className="newsletter-button">ANMELDEN</button>
         </form>
       </div>
       <div className="imprint">
