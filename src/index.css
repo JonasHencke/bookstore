@@ -533,19 +533,20 @@ footer {
     color: var(--color-brown);
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin: 3em auto;
+    align-items: center;
+    margin: 2em 0;
     /* insert clamp */  
 }
 
-.about h1 {
-    margin: 0 auto
+.about-banner {
+    font-size: 2vw;
+    text-align: center;
+    max-width: 90%;
 }
 
-.about-container-image {
-
-}
-
-.about-container-text {
-    
+.about-quote {
+    font-size: 5vw;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
 }

@@ -9,7 +9,7 @@ export default function About() {
           Von allen Welten, die der Mensch erschaffen hat, ist die der Bücher
           die Gewaltigste.
         </p>
-        <p>- Heinrich Heine -</p>
+        <p>Heinrich Heine</p>
       </div>
       <div className="about-display">
         <h2></h2>
