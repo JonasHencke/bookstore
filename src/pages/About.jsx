@@ -1,4 +1,7 @@
 import React from "react";
+import EarthSVG from "../images/earth.svg"
+import CustomerSVG from "../images/customer.svg"
+import BooksSVG from "../images/books.svg"
 
 export default function About() {
   return (
@@ -9,26 +12,31 @@ export default function About() {
           Von allen Welten, die der Mensch erschaffen hat, ist die der Bücher
           die Gewaltigste.
         </p>
-        <p>Heinrich Heine</p>
+        <p className="about-author">Heinrich Heine</p>
       </div>
       <div className="about-display">
-        <h2></h2>
-        <p></p>
+        <h2>Unsere Versprechen</h2>
         <div>
           <div>
-            <img></img>
-            <p></p>
-            <p></p>
+            <img src={CustomerSVG} className="about-SVG"></img>
+            <p>Rücksicht auf die Kunden</p>
+            <p>zuvorkommend, verständisvoll, freundlich</p>
           </div>
           <div>
-            <img></img>
-            <p></p>
-            <p></p>
+            <img src={EarthSVG} className="about-SVG"></img>
+            <p>Rücksicht auf die Umwelt</p>
+            <p>
+              nachhaltiger Versand,
+              <br /> Abholung in der Filliale möglich
+            </p>
           </div>
           <div>
-            <img></img>
-            <p></p>
-            <p></p>
+            <img src={BooksSVG} className="about-SVG"></img>
+            <p>Rücksicht auf die Literatur</p>
+            <p>
+              vielfältiges Sortiment,
+              <br />
+            </p>
           </div>
         </div>
       </div>
