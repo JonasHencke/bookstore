@@ -143,13 +143,15 @@ footer {
     letter-spacing: 3px;
     color: var(--color-white);
     text-align: center;
+    font-size: var(--fs-m);
 }
 
 .newsletter-wrapper p {
     max-width: 300px;
     text-align: center;
     letter-spacing: 1px;
-    margin: 25px
+    margin: 25px;
+    font-size: var(--fs-s);
 }
 
 .newsletter-wrapper form {
@@ -578,6 +580,7 @@ footer {
 .promises-display {
     display: flex;
     width: 100%;
+    max-width: 1200px;
     justify-content: space-around;
     margin: 2em auto;
     font-size: var(--fs-s)
