@@ -569,12 +569,12 @@ footer {
 }
 
 .about-display h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 7vw, 3rem);
     margin-bottom: 0em;
 }
 
 .about-SVG {
-    width: 80px;
+    width: 40%;
 }
 
 .promises-display {
