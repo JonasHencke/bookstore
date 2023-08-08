@@ -647,3 +647,60 @@ footer {
         padding: 0 1em;
     }
 }
+
+/* -------------------------------- */
+/* Contact Component */
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-brown)
+}
+
+.contact-message {
+    max-width: 300px
+}
+
+.contact-display {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 2em;
+}
+
+.contact-display-forms {
+    width: 70%;
+    border-right: var(--color-brown) 2px solid;
+    padding-right: 2em
+}
+
+.contact-forms {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact-forms-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-forms-container label {
+    width: 100px
+}
+
+.contact-forms-container input {
+    width: 60%;
+    height: 3em;
+}
+
+.contact-forms-button {
+    max-width: 100px;
+    height: 40px
+}
+
+.contact-display-info {
+    margin-left: 2em
+}
