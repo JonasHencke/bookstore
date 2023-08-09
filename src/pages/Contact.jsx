@@ -27,7 +27,7 @@ export default function Contact() {
             </div>
             <div className="contact-forms-container">
               <label>Nachricht</label>
-              <input></input>
+              <textarea></textarea>
             </div>
             <button className="contact-forms-button">Senden</button>
           </form>
