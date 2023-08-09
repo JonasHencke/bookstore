@@ -727,3 +727,39 @@ footer {
 .contact-display-info {
     margin-left: 2em
 }
+
+@media (max-width: 800px) {
+    .contact-display {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: none
+    }
+
+    .contact-display-forms {
+        width: 90%;
+        padding: 0px;
+        border: none
+    }
+
+    .contact-display-info {
+        margin: 0px;
+        justify-content: start;
+    }
+
+    .contact-forms-container {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .contact-forms-container input, .contact-forms-container textarea {
+        width: 100%;
+
+    }
+
+    .contact-info-content {
+        display: flex;
+        gap: 2em;
+        justify-content: start;
+    }
+}

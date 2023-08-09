@@ -33,22 +33,28 @@ export default function Contact() {
           </form>
         </div>
         <div className="contact-display-info">
-          <div>
+          <div className="contact-info-content">
             <img src={AddressSVG} style={{ width: "40px" }}></img>
-            <h3>Adresse</h3>
-            <p>
-              12345 Musterstadt <br /> BookNook GmbH <br /> 12345
-            </p>
+            <div className="contact-info-text">
+              <h3>Adresse</h3>
+              <p>
+                12345 Musterstadt <br /> BookNook GmbH <br /> 12345
+              </p>
+            </div>
           </div>
-          <div>
+          <div className="contact-info-content">
             <img src={TelephoneSVG} style={{ width: "40px" }}></img>
-            <h3>Ruf uns an</h3>
-            <p>+49 123 45678</p>
+            <div className="contact-info-text">
+              <h3>Ruf uns an</h3>
+              <p>+49 123 45678</p>
+            </div>
           </div>
-          <div>
+          <div className="contact-info-content">
             <img src={MailSVG} style={{ width: "40px" }}></img>
-            <h3>Schreib uns</h3>
-            <p>book@nook.de</p>
+            <div className="contact-info-text">
+              <h3>Schreib uns</h3>
+              <p>book@nook.de</p>
+            </div>
           </div>
         </div>
       </div>
