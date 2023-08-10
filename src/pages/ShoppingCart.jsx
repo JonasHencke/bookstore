@@ -6,7 +6,13 @@ export default function shoppingCart() {
   const { shoppingCart } = React.useContext(ThemeContext);
   const displayShoppingCart = shoppingCart.map((book) => (
     <div key={book.id} className="book-card">
-      <Link to={`../books/${book.id}`}>
+      <Link
+        to={`../books/${book.id}`}
+        state={{
+            search: "../shoppingcart"
+          }}
+        
+      >
         <img src={book.imageURL} style={{ width: "200px" }}></img>
         <div className="book-info">
           <p style={{ fontWeight: "300" }}>{book.author}</p>
@@ -22,7 +28,9 @@ export default function shoppingCart() {
         <h1 className="cart-header">Dein Einkaufswagen :</h1>
         {displayShoppingCart}
       </div>
-      <button className="contact-forms-button" style={{marginBottom: "2em"}}>Einkauf abschließen</button>
+      <button className="contact-forms-button" style={{ marginBottom: "2em" }}>
+        Einkauf abschließen
+      </button>
     </div>
   );
 }

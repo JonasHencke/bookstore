@@ -45,7 +45,7 @@ export default function Books() {
         <Link
           to={book.id}
           state={{
-            search: `?${searchParams.toString()}`,
+            search: `/books?${searchParams.toString()}`,
             type: typeFilter,
           }}
         >
