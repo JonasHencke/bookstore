@@ -763,3 +763,18 @@ footer {
         justify-content: start;
     }
 }
+
+/* -------------------------------- */
+/* ShoppingCart Component */
+
+.cart-header {
+    color: var(--color-brown);
+    font-size: clamp(1.5rem, 7vw, 3rem);
+    margin-bottom: 0em;
+    font-weight: 500;
+    margin-top: 0.2em;
+}
+
+.book-card:last-child a {
+    border: none
+}
