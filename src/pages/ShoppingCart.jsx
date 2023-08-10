@@ -4,14 +4,14 @@ import { ThemeContext } from "../App.jsx";
 
 export default function shoppingCart() {
   const { shoppingCart } = React.useContext(ThemeContext);
+
   const displayShoppingCart = shoppingCart.map((book) => (
     <div key={book.id} className="book-card">
       <Link
         to={`../books/${book.id}`}
         state={{
-            search: "../shoppingcart"
-          }}
-        
+          search: "../shoppingcart",
+        }}
       >
         <img src={book.imageURL} style={{ width: "200px" }}></img>
         <div className="book-info">
@@ -22,15 +22,38 @@ export default function shoppingCart() {
       </Link>
     </div>
   ));
-  return (
-    <div className="shop-display">
-      <div className="book-display">
-        <h1 className="cart-header">Dein Einkaufswagen :</h1>
-        {displayShoppingCart}
+
+  if (shoppingCart.length === 0) {
+    return (
+      <div className="shop-display">
+        <div className="book-display">
+          <h1 className="cart-header">Dein Einkaufswagen ist leer</h1>
+          {displayShoppingCart}
+        </div>
+        <Link
+          to={`/books?page=1`}
+          className="contact-forms-button"
+          style={{ marginBottom: "5em",
+        marginTop: "5em" }}
+        >
+          Zurück zum Shop
+        </Link>
       </div>
-      <button className="contact-forms-button" style={{ marginBottom: "2em" }}>
-        Einkauf abschließen
-      </button>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="shop-display">
+        <div className="book-display">
+          <h1 className="cart-header">Dein Einkaufswagen :</h1>
+          {displayShoppingCart}
+        </div>
+        <button
+          className="contact-forms-button"
+          style={{ marginBottom: "2em" }}
+        >
+          Einkauf abschließen
+        </button>
+      </div>
+    );
+  }
 }

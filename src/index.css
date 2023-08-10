@@ -778,3 +778,11 @@ footer {
 .book-card:last-child a {
     border: none
 }
+
+.contact-forms-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px
+}
