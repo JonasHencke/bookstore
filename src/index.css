@@ -716,7 +716,8 @@ footer {
     font-family: 'Roboto', sans-serif;
     background-color: var(--color-white);
     border: var(--color-turquoise) 1px solid;
-    color: var(--color-turquoise)
+    color: var(--color-turquoise);
+    text-align: center;
 }
 
 .contact-forms-button:active {
@@ -782,7 +783,31 @@ footer {
 .contact-forms-button {
     display: flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
-    text-align: center;
     font-size: 14px
+}
+
+/* -------------------------------- */
+/* Snackbar Component */
+
+.snackbar {
+    position: fixed;
+    top: 50px;
+    right: calc(50% - 100px);
+    background-color: var(--color-turquoise);
+    border: var(--color-white) 3px solid;
+    color: var(--color-white);
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    border-radius: 7px;
+}
+
+#snackbar-visible {
+    display: block;
+}
+
+#snackbar-invisible{
+    display: none;
 }
