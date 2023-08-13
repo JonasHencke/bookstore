@@ -4,11 +4,11 @@ import Footer from "./Footer"
 import { Outlet } from "react-router-dom"
 import Snackbar from "./Snackbar";
 
-export default function Layout() {
+export default function Layout(props) {
     return (
         <div className="page-layout">
             <Header/>
-            <Snackbar/>
+            <Snackbar SnackbarShow={props.SnackbarShow}/>
             <main>
               <Outlet />
             </main>

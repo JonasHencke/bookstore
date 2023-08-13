@@ -10,10 +10,21 @@ import EmptyPage from "./pages/EmptyPage"
 import ShoppingCart from "./pages/ShoppingCart"
 
 const ThemeContext = React.createContext();
+function showMessage() {
+
+}
 
 function App() {  
   const [shoppingCart, setShoppingCart] = React.useState([]);
+  const [SnackbarShow, setSnackbarShow] = React.useState("invisible");
   
+  function showSnackbarMessage() {
+    setSnackbarShow("visible");
+    setTimeout(() => {
+      setSnackbarShow("invisible")
+    }, 3000)
+  }
+
   function addItemToCart(book) {
     setShoppingCart([
       book,
@@ -27,13 +38,13 @@ function App() {
     <ThemeContext.Provider value={{shoppingCart, addItemToCart}}>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Layout/>}>
+        <Route path='/' element={<Layout SnackbarShow={SnackbarShow}/>}>
           <Route index element={<Home/>}/>
           <Route path='about' element={<About/>}/>
           <Route path='contact' element={<Contact/>}/>
           <Route path='books' element={<Books/>}/>
           <Route path='books/:id' element={<BookDetails/>}/>
-          <Route path='shoppingcart' element={<ShoppingCart/>}/>
+          <Route path='shoppingcart' element={<ShoppingCart showSnackbarMessage={showSnackbarMessage}/>}/>
           <Route path="*" element={<EmptyPage />} />
         </Route>
       </Routes>

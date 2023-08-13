@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../App.jsx";
 
-export default function shoppingCart() {
+export default function shoppingCart(props) {
   const { shoppingCart } = React.useContext(ThemeContext);
 
   const displayShoppingCart = shoppingCart.map((book) => (
@@ -50,6 +50,7 @@ export default function shoppingCart() {
         <button
           className="contact-forms-button"
           style={{ marginBottom: "2em" }}
+          onClick={() => props.showSnackbarMessage()}
         >
           Einkauf abschließen
         </button>
