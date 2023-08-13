@@ -3,7 +3,11 @@ import AddressSVG from "../images/address.svg";
 import MailSVG from "../images/mail.svg";
 import TelephoneSVG from "../images/telephone.svg";
 
-export default function Contact() {
+export default function Contact(props) {
+  function MessageSuccess() {
+    props.setSnackbarMessage("Nachricht erfolgreich versandt!");
+    props.showSnackbarMessage();
+  }
   return (
     <div className="contact-wrapper">
       <p className="contact-message">
@@ -12,21 +16,29 @@ export default function Contact() {
       <div className="contact-display">
         <div className="contact-display-forms">
           <h1 className="contact-header">Kontaktformular</h1>
-          <form className="contact-forms">
+          <form
+            className="contact-forms"
+            id="form"
+            onSubmit={(e) => {
+              MessageSuccess();
+              document.getElementById("form").reset();
+              e.preventDefault();
+            }}
+          >
             <div className="contact-forms-container">
-              <label>Name</label>
-              <input></input>
+              <label>Name *</label>
+              <input type="text" required></input>
             </div>
             <div className="contact-forms-container">
-              <label>E-Mail</label>
-              <input></input>
+              <label>E-Mail *</label>
+              <input type="email" required></input>
             </div>
             <div className="contact-forms-container">
               <label>Telefonnummer</label>
               <input></input>
             </div>
             <div className="contact-forms-container">
-              <label>Nachricht</label>
+              <label>Nachricht *</label>
               <textarea></textarea>
             </div>
             <button className="contact-forms-button">Senden</button>

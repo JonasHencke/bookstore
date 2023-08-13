@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ThemeContext } from "../App.jsx";
 
 export default function shoppingCart(props) {
-  const { shoppingCart } = React.useContext(ThemeContext);
+  const { shoppingCart, setShoppingCart } = React.useContext(ThemeContext);
 
   const displayShoppingCart = shoppingCart.map((book) => (
     <div key={book.id} className="book-card">
@@ -22,6 +22,12 @@ export default function shoppingCart(props) {
       </Link>
     </div>
   ));
+
+  function OrderSuccess() {
+    props.setSnackbarMessage("Vielen Dank für deine Bestellung!");
+    props.showSnackbarMessage();
+    setShoppingCart([])
+  }
 
   if (shoppingCart.length === 0) {
     return (
@@ -50,7 +56,7 @@ export default function shoppingCart(props) {
         <button
           className="contact-forms-button"
           style={{ marginBottom: "2em" }}
-          onClick={() => props.showSnackbarMessage()}
+          onClick={() => OrderSuccess()}
         >
           Einkauf abschließen
         </button>
