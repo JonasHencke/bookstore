@@ -60,7 +60,7 @@ header a {
 }
 
 .shoppingCart-icon {
-    width: 30px;
+    width: 30px
 }
 
 .shoppingCart-wrapper .cart-counter {
@@ -575,6 +575,12 @@ footer {
 
 .about-SVG {
     width: 40%;
+}
+
+@media (max-width: 500px) {
+    .about-SVG {
+        width: 30%
+    }
 }
 
 .promises-display {
