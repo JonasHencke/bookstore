@@ -60,7 +60,8 @@ header a {
 }
 
 .shoppingCart-icon {
-    width: 30px
+    width: 30px;
+    padding: 10px
 }
 
 .shoppingCart-wrapper .cart-counter {
