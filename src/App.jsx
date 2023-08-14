@@ -21,7 +21,7 @@ function App() {
     setSnackbarShow("visible");
     setTimeout(() => {
       setSnackbarShow("invisible");
-    }, 5000);
+    }, 4500);
   }
 
   function addItemToCart(book) {
