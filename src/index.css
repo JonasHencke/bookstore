@@ -727,6 +727,7 @@ footer {
     border: var(--color-turquoise) 1px solid;
     color: var(--color-turquoise);
     text-align: center;
+    cursor: pointer;
 }
 
 .contact-forms-button:active {
