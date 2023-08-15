@@ -783,7 +783,8 @@ footer {
     font-size: clamp(1.5rem, 7vw, 3rem);
     margin-bottom: 0em;
     font-weight: 500;
-    margin-top: 0.2em;
+    margin: 1rem auto;
+    text-align: center;
 }
 
 .book-card:last-child a {
