@@ -277,12 +277,14 @@ footer {
 /* Error 404 page */
 
 .empty-page-wrapper {
+    width: 80%;
     max-width: 500px;
     color: var(--color-brown);
     margin: 100px auto;
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-size: var(--fs-m);
 }
 
 .empty-page-wrapper img {
