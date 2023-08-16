@@ -18,6 +18,7 @@ export default function shoppingCart(props) {
           <p style={{ fontWeight: "300" }}>{book.author}</p>
           <p style={{ fontWeight: "500" }}>{book.title}</p>
           <p style={{ fontWeight: "500" }}>{book.price} €</p>
+          <p style={{ fontWeight: "500" }}>Anzahl: {book.amount}</p>
         </div>
       </Link>
     </div>

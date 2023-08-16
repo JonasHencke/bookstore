@@ -25,8 +25,13 @@ function App() {
   }
 
   function addItemToCart(book) {
-    setShoppingCart([book, ...shoppingCart]);
-    console.log(shoppingCart);
+    const i = shoppingCart.findIndex(e => e.id === book.id)
+    if (i == -1) {
+      book.amount = 1
+      setShoppingCart([book, ...shoppingCart]);
+    } else {
+      shoppingCart[i].amount += 1
+    }
   }
 
   return (
