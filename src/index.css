@@ -393,7 +393,7 @@ footer {
     gap: 1em;
     width: 50%;
     max-width: 400px;
-    color: #776154;
+    color: var(--color-brown);
 }
 
 .book-info p {
@@ -449,13 +449,18 @@ footer {
     text-decoration: none;
     color: var(--color-turquoise);
     font-weight: 800;
-    /* border-bottom: var(--color-turquoise) 1px solid; */
 }
 
 .bookdetails-container {
     display: flex;
     justify-content:flex-start;
     margin: 3em 0;
+    color: var(--color-brown);
+    
+}
+
+.font-weight-800 {
+    font-weight: 800;
 }
 
 .bookdetails-img-container {
@@ -535,6 +540,10 @@ footer {
     
     .bookdetails-backlink {
         font-size: var(--fs-s);
+    }
+
+    .bookdetails-title {
+        margin-top: 2rem;
     }
 }
 

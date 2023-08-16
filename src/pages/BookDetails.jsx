@@ -76,14 +76,14 @@ export default function BookDetails() {
             >
               In den Warenkorb
             </button>
-            <p className="bookdetails-genre">Genre: {book.genre}</p>
-            <p className="bookdetails-pages">Seitenanzahl: {book.pages}</p>
+            <p className="bookdetails-genre"><span className="font-weight-800">Genre:</span> {book.genre}</p>
+            <p className="bookdetails-pages"><span className="font-weight-800">Seitenanzahl:</span> {book.pages}</p>
             <p className="bookdetails-releaseDate">
-              Erscheinungsdatum: {book.releaseDate}
+            <span className="font-weight-800">Erscheinungsdatum:</span> {book.releaseDate}
             </p>
-            <p className="bookdetails-ISBN">ISBN: {book.ISBN}</p>
+            <p className="bookdetails-ISBN"><span className="font-weight-800">ISBN:</span> {book.ISBN}</p>
             <p className="bookdetails-description">
-              Beschreibung: <br />
+            <span className="font-weight-800">Beschreibung:</span> <br />
               <br /> {book.description}
             </p>
           </div>
