@@ -67,10 +67,17 @@ header a {
 .shoppingCart-wrapper .cart-counter {
     position: absolute;
     top: 30px;
-    right: -10px;
     text-align: center;
     border-radius: 100%;
     color: var(--color-turquoise)
+}
+
+.shoppingCart-icon {
+    right: -10px
+}
+
+.cart-counter {
+    right: 0px
 }
 
 @media (max-width: 400px) {
