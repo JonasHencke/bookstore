@@ -10,6 +10,8 @@ export default function Header() {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+  
+  const shoppingCartCounter = shoppingCart != 0 && shoppingCart.reduce((a,b) => a + b.amount, 0)
 
   return (
     <header>
@@ -19,7 +21,7 @@ export default function Header() {
         <div className="shoppingCart-wrapper">
           <NavLink to="/shoppingcart">
           <img className="shoppingCart-icon" src={ShoppingCartSVG} />
-          <p className="cart-counter">{shoppingCart != 0 && shoppingCart.length }</p>
+          <p className="cart-counter">{shoppingCartCounter}</p>
           </NavLink>
         </div>
       </Link>

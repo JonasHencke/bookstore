@@ -29,7 +29,15 @@ function App() {
       book.amount = 1;
       setShoppingCart([book, ...shoppingCart]);
     } else {
-      shoppingCart[i].amount += 1;
+      book.amount += 1
+      const nextShoppingCart = shoppingCart.map((c, index) => {
+        if (i === index) {
+          return book
+        } else {
+          return c
+        }
+      })
+      setShoppingCart(nextShoppingCart)
     }
   }
 
@@ -39,9 +47,9 @@ function App() {
     if (book.amount > 0) {
       const nextShoppingCart = shoppingCart.map((c, index) => {
         if (i === index) {
-          return book;
+          return book
         } else {
-          return c;
+          return c
         }
       });
       setShoppingCart(nextShoppingCart);
