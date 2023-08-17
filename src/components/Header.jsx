@@ -5,13 +5,12 @@ import { ThemeContext } from "../App.jsx";
 
 export default function Header() {
   const { shoppingCart } = React.useContext(ThemeContext);
+  const shoppingCartCounter = shoppingCart != 0 && shoppingCart.reduce((a,b) => a + b.amount, 0)
   let { pathname } = useLocation()
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  
-  const shoppingCartCounter = shoppingCart != 0 && shoppingCart.reduce((a,b) => a + b.amount, 0)
 
   return (
     <header>
