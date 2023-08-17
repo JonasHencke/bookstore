@@ -10,7 +10,6 @@ import EmptyPage from "./pages/EmptyPage";
 import ShoppingCart from "./pages/ShoppingCart";
 
 const ThemeContext = React.createContext();
-function showMessage() {}
 
 function App() {
   const [shoppingCart, setShoppingCart] = React.useState([]);

@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { ThemeContext } from "../App.jsx";
 
 export default function shoppingCart(props) {
-  const { shoppingCart, setShoppingCart, removeItemFromCart } = React.useContext(ThemeContext);
+  const { shoppingCart, setShoppingCart, removeItemFromCart } =
+    React.useContext(ThemeContext);
 
   const displayShoppingCart = shoppingCart.map((book) => (
     <div key={book.id} className="book-card">
@@ -19,19 +20,25 @@ export default function shoppingCart(props) {
           <p style={{ fontWeight: "500" }}>{book.title}</p>
           <p style={{ fontWeight: "500" }}>{book.price} €</p>
           <p style={{ fontWeight: "500" }}>Anzahl: {book.amount}</p>
+          <button
+            style={{ backgroundColor: "rgba(255,0,0,0.8)" }}
+            className="warenkorb-Btn"
+            onClick={(e) => {
+              removeItemFromCart(book);
+              e.preventDefault();
+            }}
+          >
+            &#10005; Entfernen
+          </button>
         </div>
       </Link>
-      <button className="warenkorb-Btn" onClick={(e) => {
-              removeItemFromCart(book);
-              e.preventDefault()
-            }}>X Entfernen</button>
     </div>
   ));
 
   function OrderSuccess() {
     props.setSnackbarMessage("Vielen Dank für deine Bestellung!");
     props.showSnackbarMessage();
-    setShoppingCart([])
+    setShoppingCart([]);
   }
 
   if (shoppingCart.length === 0) {
@@ -44,8 +51,7 @@ export default function shoppingCart(props) {
         <Link
           to={`/books?page=1`}
           className="contact-forms-button"
-          style={{ marginBottom: "5em",
-        marginTop: "5em" }}
+          style={{ marginBottom: "5em", marginTop: "5em" }}
         >
           Zurück zum Shop
         </Link>
