@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ThemeContext } from "../App.jsx";
 
 export default function shoppingCart(props) {
-  const { shoppingCart, setShoppingCart } = React.useContext(ThemeContext);
+  const { shoppingCart, setShoppingCart, removeItemFromCart } = React.useContext(ThemeContext);
 
   const displayShoppingCart = shoppingCart.map((book) => (
     <div key={book.id} className="book-card">
@@ -21,6 +21,10 @@ export default function shoppingCart(props) {
           <p style={{ fontWeight: "500" }}>Anzahl: {book.amount}</p>
         </div>
       </Link>
+      <button className="warenkorb-Btn" onClick={(e) => {
+              removeItemFromCart(book);
+              e.preventDefault()
+            }}>X Entfernen</button>
     </div>
   ));
 

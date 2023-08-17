@@ -25,17 +25,41 @@ function App() {
   }
 
   function addItemToCart(book) {
-    const i = shoppingCart.findIndex(e => e.id === book.id)
+    const i = shoppingCart.findIndex((e) => e.id === book.id);
     if (i == -1) {
-      book.amount = 1
+      book.amount = 1;
       setShoppingCart([book, ...shoppingCart]);
     } else {
-      shoppingCart[i].amount += 1
+      shoppingCart[i].amount += 1;
+    }
+  }
+
+  function removeItemFromCart(book) {
+    const i = shoppingCart.findIndex((e) => e.id === book.id);
+    book.amount -= 1;
+    if (book.amount > 0) {
+      const nextShoppingCart = shoppingCart.map((c, index) => {
+        if (i === index) {
+          return book;
+        } else {
+          return c;
+        }
+      });
+      setShoppingCart(nextShoppingCart);
+    } else {
+      setShoppingCart(shoppingCart.filter((a) => a.id != book.id));
     }
   }
 
   return (
-    <ThemeContext.Provider value={{ shoppingCart, setShoppingCart, addItemToCart }}>
+    <ThemeContext.Provider
+      value={{
+        shoppingCart,
+        setShoppingCart,
+        addItemToCart,
+        removeItemFromCart,
+      }}
+    >
       <BrowserRouter>
         <Routes>
           <Route
