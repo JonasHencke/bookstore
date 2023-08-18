@@ -313,10 +313,11 @@ footer {
     flex-wrap: wrap;
     gap: 15px;
     width: 100%;
+    font-size: var(--fs-s);
     margin: 2rem 0px;
 }
 
-.search-buttons a {
+.filter-link, .link-remove {
     background-color: var(--color-brown);
     color: var(--color-white);
     padding: 0.5em 1em;

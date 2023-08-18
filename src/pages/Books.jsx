@@ -68,42 +68,42 @@ export default function Books() {
       <div className="search-buttons">
         <Link
           to="?type=fantasy&page=1"
-          className={typeFilter === "fantasy" ? "link-active" : ""}
+          className={`filter-link ${typeFilter === "fantasy" ? "link-active" : ""}`}
           onClick={() => setPageNumber(0)}
         >
           Fantasy
         </Link>
         <Link
           to="?type=klassiker&page=1"
-          className={typeFilter === "klassiker" ? "link-active" : ""}
+          className={`filter-link ${typeFilter === "klassiker" ? "link-active" : ""}`}
           onClick={() => setPageNumber(0)}
         >
           Klassiker
         </Link>
         <Link
           to="?type=sachbuch&page=1"
-          className={typeFilter === "sachbuch" ? "link-active" : ""}
+          className={`filter-link ${typeFilter === "sachbuch" ? "link-active" : ""}`}
           onClick={() => setPageNumber(0)}
         >
           Sachbuch
         </Link>
         <Link
           to="?type=kinder und jugend&page=1"
-          className={typeFilter === "kinder und jugend" ? "link-active" : ""}
+          className={`filter-link ${typeFilter === "kinder und jugend" ? "link-active" : ""}`}
           onClick={() => setPageNumber(0)}
         >
           Kinder und Jugend
         </Link>
         <Link
           to="?type=roman&page=1"
-          className={typeFilter === "roman" ? "link-active" : ""}
+          className={`filter-link ${typeFilter === "roman" ? "link-active" : ""}`}
           onClick={() => setPageNumber(0)}
         >
           Roman
         </Link>
         <Link
           to="?type=krimi&page=1"
-          className={typeFilter === "krimi" ? "link-active" : ""}
+          className={`filter-link ${typeFilter === "krimi" ? "link-active" : ""}`}
           onClick={() => setPageNumber(0)}
         >
           Krimi
