@@ -817,6 +817,18 @@ footer {
     font-size: 14px
 }
 
+.cart-checkout {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-brown);
+    align-items: center;
+    font-size: var(--fs-m);
+    gap: 10px;
+    padding: 20px 0;
+    text-decoration: none; 
+    gap: 1rem; 
+}
+
 /* -------------------------------- */
 /* Snackbar Component */
 

@@ -5,7 +5,7 @@ import { ThemeContext } from "../App.jsx";
 export default function shoppingCart(props) {
   const { shoppingCart, setShoppingCart, removeItemFromCart } =
     React.useContext(ThemeContext);
-
+  const totalPrice = shoppingCart.reduce((a, b) => a + b.price * b.amount, 0);
   const displayShoppingCart = shoppingCart.map((book) => (
     <div key={book.id} className="book-card">
       <Link
@@ -63,14 +63,17 @@ export default function shoppingCart(props) {
         <div className="book-display">
           <h1 className="cart-header">Dein Einkaufswagen :</h1>
           {displayShoppingCart}
+          <div className="cart-checkout">
+            <div>Summe: {totalPrice} €</div>
+            <button
+              className="contact-forms-button"
+              style={{ marginBottom: "2em" }}
+              onClick={() => OrderSuccess()}
+            >
+              Einkauf abschließen
+            </button>
+          </div>
         </div>
-        <button
-          className="contact-forms-button"
-          style={{ marginBottom: "2em" }}
-          onClick={() => OrderSuccess()}
-        >
-          Einkauf abschließen
-        </button>
       </div>
     );
   }
