@@ -7,6 +7,7 @@ export default function Contact(props) {
   function MessageSuccess() {
     props.setSnackbarMessage("Nachricht erfolgreich versandt!");
   }
+  
   return (
     <div className="contact-wrapper">
       <p className="contact-message">
