@@ -759,10 +759,16 @@ footer {
 
 @media (max-width: 800px) {
     .contact-display {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     width: 100%;
-    border: none
+    border: none;
+    gap: 2em;
+    margin: 2.5em auto
+    }
+
+    .contact-message {
+        display: none;
     }
 
     .contact-display-forms {
