@@ -122,8 +122,8 @@ export default function Books() {
           pageCount={pageCount}
           onPageChange={changePage}
           containerClassName={"pagination"}
-          previousClassName={"pagination-item"}
-          nextLinkClassName={"pagination-item"}
+          previousClassName={"pagination-item-previous"}
+          nextLinkClassName={"pagination-item-next"}
           disabledClassName={"pagination-disabled"}
           activeLinkClassName={"pagination-active"}
           pageLinkClassName={"pagination-item"}
