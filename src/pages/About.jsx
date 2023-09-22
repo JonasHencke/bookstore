@@ -1,4 +1,3 @@
-import React from "react";
 import EarthSVG from "../images/earth.svg";
 import CustomerSVG from "../images/customer.svg";
 import BooksSVG from "../images/books.svg";
@@ -37,6 +36,7 @@ export default function About() {
             <p className="promise-card-head">Rücksicht auf die Literatur</p>
             <p className="promise-card-text">
               vielfältiges Sortiment,
+              Erhaltung von Kultur
               <br />
             </p>
           </div>
@@ -44,28 +44,24 @@ export default function About() {
       </div>
       <div className="about-description">
         <div className="about-description-left">
-          <h2>lorem ipsum dolor</h2>
+          <h2>Die Leidenschaft zum Lesen</h2>
           <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata. labore et
-            dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo
+            Wir von BookNook wollen Lesen an jeden Menschen nahe bringen. Lesen ist ein Hobby, eine Leidenschaft und voller Kultur.
+            Uns ist wichtig, dieses Stück Kultur zu erhalten und an nachfolgende Generationen weiter zu vermitteln.
           </p>
           <br />
           <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et
+            Aus diesem Grund haben wir es uns zur Aufgabe gemacht wertvolle Bücher auf nachhaltige Art und Weise an die Menschen zu bringen.
+            Sie können uns jederzeit in unserer Filiale antreffen und werden von unseren Mitarbeitern liebend gerne beraten.
+            
           </p>
         </div>
         <div className="about-description-right">
-          <p className="about-description-bold">lorem ipsum dolor</p>
-          <p>At vero eos et accusam et justo</p>
+          <p className="about-description-bold">Uns verbindet eine Sache:</p>
+          <p>die Leidenschaft zum Lesen</p>
           <br/>
-          <p className="about-description-bold">lorem ipsum dolor</p>
-          <p>At vero eos et accusam et justo</p>
+          <p className="about-description-bold">Kommen Sie uns gerne besuchen.</p>
+          <p>Wir freuen uns auf Sie!</p>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../App.jsx";
+import sad from "../images/sad.svg"
 
 export default function shoppingCart(props) {
   const { shoppingCart, setShoppingCart, removeItemFromCart } =
@@ -45,9 +46,10 @@ export default function shoppingCart(props) {
     return (
       <div className="shop-display">
         <div className="book-display">
-          <h1 className="cart-header">Dein Einkaufswagen ist leer</h1>
+          <h1 className="cart-header">Dein Einkaufswagen ist leider leer..</h1>
           {displayShoppingCart}
         </div>
+        <img src={sad} style={{width:"15%", alignSelf:"center"}}></img>
         <Link
           to={`/books?page=1`}
           className="contact-forms-button"
