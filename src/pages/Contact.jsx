@@ -5,6 +5,7 @@ import TelephoneSVG from "../images/telephone.svg";
 export default function Contact(props) {
   function MessageSuccess() {
     props.setSnackbarMessage("Nachricht erfolgreich versandt!");
+    props.showSnackbarMessage()
   }
   
   return (
@@ -38,7 +39,7 @@ export default function Contact(props) {
             </div>
             <div className="contact-forms-container">
               <label>Nachricht *</label>
-              <textarea></textarea>
+              <textarea required></textarea>
             </div>
             <button className="contact-forms-button">Senden</button>
           </form>
