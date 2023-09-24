@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../App.jsx";
-import sad from "../images/sad.svg"
+import sad from "../images/sad.svg";
 
 export default function shoppingCart(props) {
-  const { shoppingCart, setShoppingCart, removeItemFromCart } =
+  const { shoppingCart, setShoppingCart, removeItemFromCart, addItemToCart } =
     React.useContext(ThemeContext);
   const totalPrice = shoppingCart.reduce((a, b) => a + b.price * b.amount, 0);
   const displayShoppingCart = shoppingCart.map((book) => (
@@ -20,17 +20,25 @@ export default function shoppingCart(props) {
           <p style={{ fontWeight: "300" }}>{book.author}</p>
           <p style={{ fontWeight: "500" }}>{book.title}</p>
           <p style={{ fontWeight: "500" }}>{book.price} €</p>
-          <p style={{ fontWeight: "500" }}>Anzahl: {book.amount}</p>
-          <button
-            style={{ backgroundColor: "rgba(255,0,0,0.8)" }}
-            className="warenkorb-Btn"
-            onClick={(e) => {
-              removeItemFromCart(book);
-              e.preventDefault();
-            }}
-          >
-            &#10005; Entfernen
-          </button>
+          <div className="shoppingCart-Btn-container">
+            <button
+              className="shoppingCart-Btn"
+              onClick={(e) => {
+                removeItemFromCart(book);
+                e.preventDefault();
+              }}
+            >-</button>
+            <div>{book.amount}</div>
+            <button
+              className="shoppingCart-Btn"
+              onClick={(e) => {
+                addItemToCart(book);
+                e.preventDefault();
+              }}
+            >
+              +
+            </button>
+          </div>
         </div>
       </Link>
     </div>
@@ -49,7 +57,7 @@ export default function shoppingCart(props) {
           <h1 className="cart-header">Dein Einkaufswagen ist leider leer..</h1>
           {displayShoppingCart}
         </div>
-        <img src={sad} style={{width:"15%", alignSelf:"center"}}></img>
+        <img src={sad} style={{ width: "15%", alignSelf: "center" }}></img>
         <Link
           to={`/books?page=1`}
           className="contact-forms-button"

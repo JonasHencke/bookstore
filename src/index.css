@@ -838,6 +838,21 @@ h2 {
   gap: 1rem;
 }
 
+.shoppingCart-Btn-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.shoppingCart-Btn {
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    border: none;
+    background-color: var(--color-turquoise);
+    color: var(--color-white);
+    align-self: end;
+    font-weight: 800;
+}
 /* -------------------------------- */
 /* Snackbar Component */
 
