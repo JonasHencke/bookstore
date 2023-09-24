@@ -415,19 +415,19 @@ footer {
 }
 
 .pagination {
+  width: 30%;
+  align-self: center;
   display: flex;
   list-style: none;
-  gap: 10%;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
-  width: 70%;
-  max-width: 800px
+  padding: 0px;
 }
 
 .pagination-item,
 .pagination-item-next,
-.pagination-item-previous {
+.pagination-item-previous a {
   background-color: var(--color-brown);
   padding: 0.3em 0.8em;
   border-radius: 10px;
