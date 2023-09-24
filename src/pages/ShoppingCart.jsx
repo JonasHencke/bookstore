@@ -59,7 +59,7 @@ export default function shoppingCart(props) {
         </div>
         <img src={sad} style={{ width: "15%", alignSelf: "center" }}></img>
         <Link
-          to={`/books?page=1`}
+          to={`/bookstore/books?page=1`}
           className="contact-forms-button"
           style={{ marginBottom: "5em", marginTop: "5em" }}
         >

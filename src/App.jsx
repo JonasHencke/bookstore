@@ -70,7 +70,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/"
+            path="/bookstore"
             element={
               <Layout
                 SnackbarShow={SnackbarShow}

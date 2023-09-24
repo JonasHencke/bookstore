@@ -13,14 +13,20 @@ export default function BookDetails() {
     async function loadBooks() {
       let data = await getBooks();
       let filteredBook = data.filter((book) => book.id === id);
-      console.log(filteredBook);
       setBook(filteredBook[0]);
     }
     loadBooks();
+    console.log(location.state.search)
   }, [id]);
-  if (location.state === null) {
+  if (location.state.search === "../shoppingcart") {
     return (
       <>
+        <Link
+        className="bookdetails-backlink"
+        to={`/bookstore/shoppingcart`}
+      >
+        ← Zurück
+      </Link>
         <div className="bookdetails-container">
           <img src={book.imageURL} className="bookdetails-image" />
           <div className="bookdetails-information">
@@ -37,14 +43,14 @@ export default function BookDetails() {
             >
               In den Warenkorb
             </button>
-            <p className="bookdetails-genre">Genre: {book.genre}</p>
-            <p className="bookdetails-pages">Seitenanzahl: {book.pages}</p>
+            <p className="bookdetails-genre"><span className="font-weight-800">Genre:</span> {book.genre}</p>
+            <p className="bookdetails-pages"><span className="font-weight-800">Seitenanzahl:</span> {book.pages}</p>
             <p className="bookdetails-releaseDate">
-              Erscheinungsdatum: {book.releaseDate}
+            <span className="font-weight-800">Erscheinungsdatum:</span> {book.releaseDate}
             </p>
-            <p className="bookdetails-ISBN">ISBN: {book.ISBN}</p>
+            <p className="bookdetails-ISBN"><span className="font-weight-800">ISBN:</span> {book.ISBN}</p>
             <p className="bookdetails-description">
-              Beschreibung: <br />
+            <span className="font-weight-800">Beschreibung:</span> <br />
               <br /> {book.description}
             </p>
           </div>
@@ -56,7 +62,7 @@ export default function BookDetails() {
       <>
         <Link
         className="bookdetails-backlink"
-        to={location.state.search}
+        to={`/bookstore${location.state.search}`}
       >
         ← Zurück
       </Link>
