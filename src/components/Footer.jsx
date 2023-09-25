@@ -36,24 +36,24 @@ export default function Footer() {
         <div className="imprint-flex">
           <div className="imprint-container">
             <h3>Über BookNook</h3>
-            <NavLink to="/bookstore/support">Das Unternehmen</NavLink>
-            <NavLink to="/bookstore/support">Karriere</NavLink>
-            <NavLink to="/bookstore/support">Impressum</NavLink>
-            <NavLink to="/bookstore/support">AGB</NavLink>
+            <NavLink to="/support">Das Unternehmen</NavLink>
+            <NavLink to="/support">Karriere</NavLink>
+            <NavLink to="/support">Impressum</NavLink>
+            <NavLink to="/support">AGB</NavLink>
           </div>
           <div className="imprint-container">
             <h3>Kundenservice</h3>
-            <NavLink to="/bookstore/support">Hilfe</NavLink>
-            <NavLink to="/bookstore/support">Kontakt</NavLink>
-            <NavLink to="/bookstore/support">Rücknahmen</NavLink>
-            <NavLink to="/bookstore/support">Downloadcode einlösen</NavLink>
+            <NavLink to="/support">Hilfe</NavLink>
+            <NavLink to="/support">Kontakt</NavLink>
+            <NavLink to="/support">Rücknahmen</NavLink>
+            <NavLink to="/support">Downloadcode einlösen</NavLink>
           </div>
           <div className="imprint-container">
             <h3>Rund um den Einkauf</h3>
-            <NavLink to="/bookstore/support">Benutzerdaten</NavLink>
-            <NavLink to="/bookstore/support">Fragen zur Bestellung</NavLink>
-            <NavLink to="/bookstore/support">Kaufen</NavLink>
-            <NavLink to="/bookstore/support">Versand und Lieferung</NavLink>
+            <NavLink to="/support">Benutzerdaten</NavLink>
+            <NavLink to="/support">Fragen zur Bestellung</NavLink>
+            <NavLink to="/support">Kaufen</NavLink>
+            <NavLink to="/support">Versand und Lieferung</NavLink>
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@ export default function BookDetails() {
   if (location.state.search === "../shoppingcart") {
     return (
       <>
-        <Link className="bookdetails-backlink" to={`/bookstore/shoppingcart`}>
+        <Link className="bookdetails-backlink" to={`/shoppingcart`}>
           ← Zurück
         </Link>
         <div className="bookdetails-container">
@@ -69,7 +69,7 @@ export default function BookDetails() {
       <>
         <Link
           className="bookdetails-backlink"
-          to={`/bookstore${location.state.search}`}
+          to={`${location.state.search}`}
         >
           ← Zurück
         </Link>

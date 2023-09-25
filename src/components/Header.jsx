@@ -14,20 +14,20 @@ export default function Header() {
 
   return (
     <header>
-      <Link className="page-logo" to="/bookstore">
+      <Link className="page-logo" to="/">
         BookNook
         <p>LIES DICH GLÜCKLICH</p>
         <div className="shoppingCart-wrapper">
-          <NavLink to="/bookstore/shoppingcart">
+          <NavLink to="/shoppingcart">
           <img className="shoppingCart-icon" src={ShoppingCartSVG} />
           <p className="cart-counter">{shoppingCartCounter}</p>
           </NavLink>
         </div>
       </Link>
       <nav className="header-menu">
-        <NavLink to="/bookstore/books?page=1">Bücher</NavLink>
-        <NavLink to="/bookstore/about">Über uns</NavLink>
-        <NavLink to="/bookstore/contact">Kontakt</NavLink>
+        <NavLink to="/books?page=1">Bücher</NavLink>
+        <NavLink to="/about">Über uns</NavLink>
+        <NavLink to="/contact">Kontakt</NavLink>
       </nav>
     </header>
   );

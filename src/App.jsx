@@ -70,7 +70,7 @@ function App() {
       <HashRouter>
         <Routes>
           <Route
-            path="/bookstore"
+            path="/"
             element={
               <Layout
                 SnackbarShow={SnackbarShow}
