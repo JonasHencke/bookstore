@@ -1,11 +1,11 @@
 import React from "react";
 import ReactPaginate from "react-paginate";
 import { getBooks } from "../server.jsx";
-import { Link, useSearchParams} from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { ThemeContext } from "../App.jsx";
 
 export default function Books() {
-  const { addItemToCart } = React.useContext(ThemeContext)
+  const { addItemToCart, shoppingCart } = React.useContext(ThemeContext);
   const [books, setBooks] = React.useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const [pageNumber, setPageNumber] = React.useState(
@@ -54,10 +54,17 @@ export default function Books() {
             <p style={{ fontWeight: "300" }}>{book.author}</p>
             <p style={{ fontWeight: "500" }}>{book.title}</p>
             <p style={{ fontWeight: "500" }}>{book.price} €</p>
-            <button className="warenkorb-Btn" onClick={(e) => {
-              addItemToCart(book);
-              e.preventDefault()
-            }}>In den Warenkorb</button>
+            <button
+              className="warenkorb-Btn"
+              onClick={(e) => {
+                addItemToCart(book);
+                e.preventDefault();
+              }}
+            >
+              {shoppingCart.find((item) => item.id === book.id)
+                ? "Erneut hinzufügen"
+                : "In den Warenkorb"}
+            </button>
           </div>
         </Link>
       </div>
@@ -68,48 +75,64 @@ export default function Books() {
       <div className="search-buttons">
         <Link
           to="?type=fantasy&page=1"
-          className={`filter-link ${typeFilter === "fantasy" ? "link-active" : ""}`}
+          className={`filter-link ${
+            typeFilter === "fantasy" ? "link-active" : ""
+          }`}
           onClick={() => setPageNumber(0)}
         >
           Fantasy
         </Link>
         <Link
           to="?type=klassiker&page=1"
-          className={`filter-link ${typeFilter === "klassiker" ? "link-active" : ""}`}
+          className={`filter-link ${
+            typeFilter === "klassiker" ? "link-active" : ""
+          }`}
           onClick={() => setPageNumber(0)}
         >
           Klassiker
         </Link>
         <Link
           to="?type=sachbuch&page=1"
-          className={`filter-link ${typeFilter === "sachbuch" ? "link-active" : ""}`}
+          className={`filter-link ${
+            typeFilter === "sachbuch" ? "link-active" : ""
+          }`}
           onClick={() => setPageNumber(0)}
         >
           Sachbuch
         </Link>
         <Link
           to="?type=kinder und jugend&page=1"
-          className={`filter-link ${typeFilter === "kinder und jugend" ? "link-active" : ""}`}
+          className={`filter-link ${
+            typeFilter === "kinder und jugend" ? "link-active" : ""
+          }`}
           onClick={() => setPageNumber(0)}
         >
           Kinder und Jugend
         </Link>
         <Link
           to="?type=roman&page=1"
-          className={`filter-link ${typeFilter === "roman" ? "link-active" : ""}`}
+          className={`filter-link ${
+            typeFilter === "roman" ? "link-active" : ""
+          }`}
           onClick={() => setPageNumber(0)}
         >
           Roman
         </Link>
         <Link
           to="?type=krimi&page=1"
-          className={`filter-link ${typeFilter === "krimi" ? "link-active" : ""}`}
+          className={`filter-link ${
+            typeFilter === "krimi" ? "link-active" : ""
+          }`}
           onClick={() => setPageNumber(0)}
         >
           Krimi
         </Link>
         {typeFilter != null && (
-          <Link to="?page=1" className="link-remove" onClick={() => setPageNumber(0)}>
+          <Link
+            to="?page=1"
+            className="link-remove"
+            onClick={() => setPageNumber(0)}
+          >
             Filter entfernen
           </Link>
         )}

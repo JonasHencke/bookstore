@@ -417,6 +417,11 @@ footer {
   -webkit-filter: brightness(90%);
 }
 
+.warenkorb-Btn:active {
+  transition: all .05s ease-in-out;
+  transform: scale(1.2)
+}
+
 .pagination {
   gap: 2rem;
   align-self: center;

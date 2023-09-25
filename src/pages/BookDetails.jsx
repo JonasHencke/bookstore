@@ -5,7 +5,7 @@ import { ThemeContext } from "../App.jsx";
 
 export default function BookDetails() {
   const [book, setBook] = React.useState([]);
-  const { addItemToCart } = React.useContext(ThemeContext);
+  const { addItemToCart, shoppingCart } = React.useContext(ThemeContext);
   const location = useLocation();
   const { id } = useParams();
 
@@ -20,12 +20,9 @@ export default function BookDetails() {
   if (location.state.search === "../shoppingcart") {
     return (
       <>
-        <Link
-        className="bookdetails-backlink"
-        to={`/bookstore/shoppingcart`}
-      >
-        ← Zurück
-      </Link>
+        <Link className="bookdetails-backlink" to={`/bookstore/shoppingcart`}>
+          ← Zurück
+        </Link>
         <div className="bookdetails-container">
           <img src={book.imageURL} className="bookdetails-image" />
           <div className="bookdetails-information">
@@ -40,16 +37,27 @@ export default function BookDetails() {
                 e.preventDefault();
               }}
             >
-              In den Warenkorb
+              {" "}
+              {shoppingCart.find((item) => item.id === book.id)
+                ? "Erneut hinzufügen"
+                : "In den Warenkorb"}
             </button>
-            <p className="bookdetails-genre"><span className="font-weight-800">Genre:</span> {book.genre}</p>
-            <p className="bookdetails-pages"><span className="font-weight-800">Seitenanzahl:</span> {book.pages}</p>
-            <p className="bookdetails-releaseDate">
-            <span className="font-weight-800">Erscheinungsdatum:</span> {book.releaseDate}
+            <p className="bookdetails-genre">
+              <span className="font-weight-800">Genre:</span> {book.genre}
             </p>
-            <p className="bookdetails-ISBN"><span className="font-weight-800">ISBN:</span> {book.ISBN}</p>
+            <p className="bookdetails-pages">
+              <span className="font-weight-800">Seitenanzahl:</span>{" "}
+              {book.pages}
+            </p>
+            <p className="bookdetails-releaseDate">
+              <span className="font-weight-800">Erscheinungsdatum:</span>{" "}
+              {book.releaseDate}
+            </p>
+            <p className="bookdetails-ISBN">
+              <span className="font-weight-800">ISBN:</span> {book.ISBN}
+            </p>
             <p className="bookdetails-description">
-            <span className="font-weight-800">Beschreibung:</span> <br />
+              <span className="font-weight-800">Beschreibung:</span> <br />
               <br /> {book.description}
             </p>
           </div>
@@ -60,11 +68,11 @@ export default function BookDetails() {
     return (
       <>
         <Link
-        className="bookdetails-backlink"
-        to={`/bookstore${location.state.search}`}
-      >
-        ← Zurück
-      </Link>
+          className="bookdetails-backlink"
+          to={`/bookstore${location.state.search}`}
+        >
+          ← Zurück
+        </Link>
         <div className="bookdetails-container">
           <img src={book.imageURL} className="bookdetails-image" />
           <div className="bookdetails-information">
@@ -79,21 +87,31 @@ export default function BookDetails() {
                 e.preventDefault();
               }}
             >
-              In den Warenkorb
+              {shoppingCart.find((item) => item.id === book.id)
+                ? "Erneut hinzufügen"
+                : "In den Warenkorb"}
             </button>
-            <p className="bookdetails-genre"><span className="font-weight-800">Genre:</span> {book.genre}</p>
-            <p className="bookdetails-pages"><span className="font-weight-800">Seitenanzahl:</span> {book.pages}</p>
-            <p className="bookdetails-releaseDate">
-            <span className="font-weight-800">Erscheinungsdatum:</span> {book.releaseDate}
+            <p className="bookdetails-genre">
+              <span className="font-weight-800">Genre:</span> {book.genre}
             </p>
-            <p className="bookdetails-ISBN"><span className="font-weight-800">ISBN:</span> {book.ISBN}</p>
+            <p className="bookdetails-pages">
+              <span className="font-weight-800">Seitenanzahl:</span>{" "}
+              {book.pages}
+            </p>
+            <p className="bookdetails-releaseDate">
+              <span className="font-weight-800">Erscheinungsdatum:</span>{" "}
+              {book.releaseDate}
+            </p>
+            <p className="bookdetails-ISBN">
+              <span className="font-weight-800">ISBN:</span> {book.ISBN}
+            </p>
             <p className="bookdetails-description">
-            <span className="font-weight-800">Beschreibung:</span> <br />
+              <span className="font-weight-800">Beschreibung:</span> <br />
               <br /> {book.description}
             </p>
           </div>
         </div>
       </>
-    )
+    );
   }
 }
