@@ -175,6 +175,9 @@ footer {
 .newsletter-input:focus {
   outline: 2px var(--color-turquoise) solid;
 }
+.newsletter-forms {
+  display: flex;
+}
 
 .newsletter-button {
   border: none;
@@ -415,7 +418,7 @@ footer {
 }
 
 .pagination {
-  width: 30%;
+  gap: 2rem;
   align-self: center;
   display: flex;
   list-style: none;
@@ -867,6 +870,7 @@ h2 {
   height: 70px;
   text-align: center;
   border-radius: 7px;
+  z-index: 99
 }
 
 #snackbar-visible {

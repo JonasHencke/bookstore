@@ -16,7 +16,6 @@ export default function BookDetails() {
       setBook(filteredBook[0]);
     }
     loadBooks();
-    console.log(location.state.search)
   }, [id]);
   if (location.state.search === "../shoppingcart") {
     return (

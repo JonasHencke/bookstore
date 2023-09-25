@@ -24,20 +24,18 @@ function App() {
   }
 
   function addItemToCart(book) {
-    const i = shoppingCart.findIndex((e) => e.id === book.id);
-    if (i == -1) {
-      book.amount = 1;
-      setShoppingCart([book, ...shoppingCart]);
+    const ProductExist = shoppingCart.find((item) => item.id === book.id);
+    if (ProductExist) {
+      setShoppingCart(
+        shoppingCart.map((item) =>
+          item.id === book.id
+            ? { ...ProductExist, amount: ProductExist.amount + 1 }
+            : item
+        )
+      );
     } else {
-      book.amount += 1
-      const nextShoppingCart = shoppingCart.map((c, index) => {
-        if (i === index) {
-          return book
-        } else {
-          return c
-        }
-      })
-      setShoppingCart(nextShoppingCart)
+      const newBook = { amount: 1, ...book };
+      setShoppingCart([newBook, ...shoppingCart]);
     }
   }
 
@@ -47,9 +45,9 @@ function App() {
     if (book.amount > 0) {
       const nextShoppingCart = shoppingCart.map((c, index) => {
         if (i === index) {
-          return book
+          return book;
         } else {
-          return c
+          return c;
         }
       });
       setShoppingCart(nextShoppingCart);
@@ -65,6 +63,8 @@ function App() {
         setShoppingCart,
         addItemToCart,
         removeItemFromCart,
+        showSnackbarMessage,
+        setSnackbarMessage,
       }}
     >
       <BrowserRouter>
