@@ -39,6 +39,11 @@ export default function Books() {
     window.scrollTo(0, 0);
   };
 
+  function amountInCart(book) {
+    const ProductExist = shoppingCart.find((item) => item.id === book.id);
+    return ProductExist.amount
+  }
+
   const displayBooks = filteredBooks
     .slice(pagesVisited, pagesVisited + booksPerPage)
     .map((book) => (
@@ -66,6 +71,7 @@ export default function Books() {
                 ? "Erneut hinzufügen"
                 : "In den Warenkorb"}
             </button>
+            <div style={{fontWeight: "300"}}>{shoppingCart.find((item) => item.id === book.id) && "Im Warenkorb: " + amountInCart(book)}</div>
           </div>
         </Link>
       </div>
