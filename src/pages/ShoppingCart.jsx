@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ThemeContext } from "../App.jsx";
 import sad from "../images/sad.svg";
 import turnIntoEuro from "../utils/turnIntoEuro.jsx";
@@ -8,6 +8,7 @@ export default function shoppingCart(props) {
   const { shoppingCart, setShoppingCart, removeItemFromCart, addItemToCart } =
     React.useContext(ThemeContext);
   const totalPrice = shoppingCart.reduce((a, b) => a + b.price * b.amount, 0);
+  const navigate = useNavigate();
   const displayShoppingCart = shoppingCart.map((book) => (
     <div key={book.id} className="book-card">
       <Link
@@ -28,7 +29,9 @@ export default function shoppingCart(props) {
                 removeItemFromCart(book);
                 e.preventDefault();
               }}
-            >-</button>
+            >
+              -
+            </button>
             <div>{book.amount}</div>
             <button
               className="shoppingCart-Btn"
@@ -49,6 +52,7 @@ export default function shoppingCart(props) {
     props.setSnackbarMessage("Vielen Dank für deine Bestellung!");
     props.showSnackbarMessage();
     setShoppingCart([]);
+    navigate("/");
   }
 
   if (shoppingCart.length === 0) {
