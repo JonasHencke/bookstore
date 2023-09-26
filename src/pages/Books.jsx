@@ -3,6 +3,7 @@ import ReactPaginate from "react-paginate";
 import { getBooks } from "../server.jsx";
 import { Link, useSearchParams } from "react-router-dom";
 import { ThemeContext } from "../App.jsx";
+import turnIntoEuro from "../utils/turnIntoEuro.jsx";
 
 export default function Books() {
   const { addItemToCart, shoppingCart } = React.useContext(ThemeContext);
@@ -53,7 +54,7 @@ export default function Books() {
           <div className="book-info">
             <p style={{ fontWeight: "300" }}>{book.author}</p>
             <p style={{ fontWeight: "500" }}>{book.title}</p>
-            <p style={{ fontWeight: "500" }}>{book.price} €</p>
+            <p style={{ fontWeight: "500" }}>{turnIntoEuro(book.price)}</p>
             <button
               className="warenkorb-Btn"
               onClick={(e) => {

@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation, useParams, Link } from "react-router-dom";
 import { getBooks } from "../server.jsx";
 import { ThemeContext } from "../App.jsx";
+import turnIntoEuro from "../utils/turnIntoEuro.jsx";
 
 export default function BookDetails() {
   const [book, setBook] = React.useState([]);
@@ -28,7 +29,7 @@ export default function BookDetails() {
           <div className="bookdetails-information">
             <h1 className="bookdetails-title">{book.title}</h1>
             <h2 className="bookdetails-author">{book.author}</h2>
-            <h2 className="bookdetails-price">Preis: {book.price} €</h2>
+            <h2 className="bookdetails-price">Preis: {turnIntoEuro(book.price)}</h2>
             <button
               className="warenkorb-Btn"
               style={{ alignSelf: "start", marginBottom: "1em" }}
@@ -78,7 +79,7 @@ export default function BookDetails() {
           <div className="bookdetails-information">
             <h1 className="bookdetails-title">{book.title}</h1>
             <h2 className="bookdetails-author">{book.author}</h2>
-            <h2 className="bookdetails-price">Preis: {book.price} €</h2>
+            <h2 className="bookdetails-price">Preis: {turnIntoEuro(book.price)}</h2>
             <button
               className="warenkorb-Btn"
               style={{ alignSelf: "start", marginBottom: "1em" }}

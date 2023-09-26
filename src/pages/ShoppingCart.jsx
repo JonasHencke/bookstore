@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../App.jsx";
 import sad from "../images/sad.svg";
+import turnIntoEuro from "../utils/turnIntoEuro.jsx";
 
 export default function shoppingCart(props) {
   const { shoppingCart, setShoppingCart, removeItemFromCart, addItemToCart } =
@@ -19,7 +20,7 @@ export default function shoppingCart(props) {
         <div className="book-info">
           <p style={{ fontWeight: "300" }}>{book.author}</p>
           <p style={{ fontWeight: "500" }}>{book.title}</p>
-          <p style={{ fontWeight: "500" }}>{book.price} €</p>
+          <p style={{ fontWeight: "500" }}>{turnIntoEuro(book.price)}</p>
           <div className="shoppingCart-Btn-container">
             <button
               className="shoppingCart-Btn"
@@ -74,7 +75,7 @@ export default function shoppingCart(props) {
           <h1 className="cart-header">Dein Einkaufswagen :</h1>
           {displayShoppingCart}
           <div className="cart-checkout">
-            <div>Summe: {totalPrice} €</div>
+            <div>Summe: {turnIntoEuro(totalPrice)}</div>
             <button
               className="contact-forms-button"
               style={{ marginBottom: "2em" }}
