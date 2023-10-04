@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <div className="banner-container">
-        <img className="banner-img" src={banner}></img>
+        <img className="banner-img" src={banner} alt="Webseiten-Banner"></img>
         <Link className="banner-button" to="/books?page=1">Einkaufen</Link>
       </div>
       <div className="text-block">

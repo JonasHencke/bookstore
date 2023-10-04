@@ -19,7 +19,7 @@ export default function Header() {
         <p>LIES DICH GLÜCKLICH</p>
         <div className="shoppingCart-wrapper">
           <NavLink to="/shoppingcart">
-          <img className="shoppingCart-icon" src={ShoppingCartSVG} />
+          <img className="shoppingCart-icon" src={ShoppingCartSVG} alt="Einkaufswagen" />
           <p className="cart-counter">{shoppingCartCounter}</p>
           </NavLink>
         </div>

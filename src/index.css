@@ -30,9 +30,9 @@ input {
 /* color properties */
 
 :root {
-  --color-white: #f9f6f0;
-  --color-brown: #8b7e74;
-  --color-turquoise: #479689;
+  --color-white: #ffffff;
+  --color-brown: #70665e;
+  --color-turquoise: #2b6c61;
 }
 
 /* -------------------------------- */
@@ -192,6 +192,8 @@ footer {
 }
 .newsletter-forms {
   display: flex;
+  flex-direction: column;
+  gap: 0.4rem
 }
 
 .newsletter-button {
@@ -200,6 +202,7 @@ footer {
   background-color: var(--color-turquoise);
   color: var(--color-white);
   letter-spacing: 1px;
+  padding: 7px
 }
 
 .imprint {

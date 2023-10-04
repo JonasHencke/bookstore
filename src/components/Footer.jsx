@@ -28,8 +28,11 @@ export default function Footer() {
             e.preventDefault();
           }}
         >
-          <input required className="newsletter-input" type="email"></input>
+          <label htmlFor="newsletter">E-Mail:</label>
+          <div>
+          <input required id="newsletter" className="newsletter-input" type="email"></input>
           <button className="newsletter-button">ANMELDEN</button>
+          </div>
         </form>
       </div>
       <div className="imprint">
