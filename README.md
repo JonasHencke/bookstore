@@ -1,5 +1,5 @@
 # CV Application
-![](https://i.imgur.com/Y6NTaBA.png)
+![](https://i.imgur.com/deVb3pG.png)
 
 ## Description
 
@@ -9,8 +9,12 @@ Die Daten werden mit einer API Verknüpfung geladen und auf der Seite darfestell
 
 ## Demo
 
-Link zur [Live-Website](https://jonashencke.github.io/bookstore/#/)
-
+Link zur [Live-Website](https://jonashencke.github.io/bookstore/#/) ▶️
+<br/><br/><br/>
+![test](https://i.imgur.com/cCOSuP1.png)
+![](https://i.imgur.com/DMcnu1b.png)
+![](https://i.imgur.com/eTycuRz.png)
+![](https://i.imgur.com/NsJeY9i.png)
 ## Features
 
 - responsive Design für PC, Tablet und Smartphone
@@ -34,3 +38,8 @@ Link zur [Live-Website](https://jonashencke.github.io/bookstore/#/)
 - Die Daten, welcher der Firebase Datenbank hinzugefügt wurden stammen zum Großteil von [Thalia.de](http://Thalia.de). Hierzu gehören Bild-URL, Beschreibung etc.
 - das Banner-Bild stammt von [dieser Seite](https://uk.bookshop.org/shop/thesmallcitybookshop)
 - die auf der Website verwendeten SVGs stammen allesamt von [SVGRepo](https://www.svgrepo.com/). Teilweise habe ich diese per Code oder mit dem Programm "Affinity Designer" verändert.
+
+## Lighthouse
+Die Analyse von Google Lighthouse hat die Web-Applikation wie folgt bewertet:
+
+![](https://i.imgur.com/k7Hk0fx.png)
