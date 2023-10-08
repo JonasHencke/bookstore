@@ -33,12 +33,12 @@ Link zur [Live-Website](https://jonashencke.github.io/bookstore/#/) ▶️
 - Context API (state management)
 - Firebase (Backend-as-a-Service)
 ## Herangehensweise und Lernzuwachs
-Bei diesem Projekt habe ich das Ziel verfolgt eine Single Page Application mit React und React-Router zu erstellen. Als ich mich dazu entschieden habe diese SPA als e-commerce Website zu gestalten, war ebenfalls klar, dass hierzu eine Datenbank notwendig sein wird. Da ich zum Zeitpunkt der Erstellung noch keine Kenntnisse in Backend-Programmierung hatte, entschied ich mich dazu eine Firebase-Datenbank zu erstellen. Diese habe ich über die API Schnittstelle mit meiner Webseite verbunden. Die Warenkorb-Funktion habe ich über die useState Hook implementiert.
+Bei diesem Projekt habe ich das Ziel verfolgt eine Single Page Application mit React und React-Router zu erstellen. Als ich mich dazu entschieden habe diese SPA als e-commerce Website zu gestalten, war ebenfalls klar, dass hierzu eine Datenbank notwendig sein wird. Da ich zum Zeitpunkt der Erstellung noch keine Kenntnisse in Backend-Programmierung hatte, entschied ich mich dazu eine Firebase-Datenbank zu erstellen. Diese habe ich über die API Schnittstelle mit meiner Webseite verbunden. Die Warenkorb-Funktion habe ich über die useState Hook und das State management Tool Context implementiert.
 
 Die Folgende Dinge habe ich aus diesem Projekt mitgenommen:
 - Das Erstellen und implementieren einer Datenbank mit Hilfe eines BaaS (Backend-as-a-Service) und einer API-Schnittstelle
 - Erstellen einer SPA mit Hilfe von React-Router
-- Erstellen eines Warenkorb-Systems mit Hilfe der useState Hook
+- Erstellen eines Warenkorb-Systems mit Hilfe der useState Hook und dem state management Tool Context
 ## Quellen
 
 - Die Daten, welcher der Firebase Datenbank hinzugefügt wurden stammen zum Großteil von [Thalia.de](http://Thalia.de). Hierzu gehören Bild-URL, Beschreibung etc.
