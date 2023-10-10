@@ -1,4 +1,4 @@
-# E-commerce Bookstore
+# E-commerce Buchshop
 ![](https://i.imgur.com/pR1GXWe.png)
 
 ## Description
