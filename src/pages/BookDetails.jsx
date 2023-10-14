@@ -3,6 +3,7 @@ import { useLocation, useParams, Link } from "react-router-dom";
 import { getBooks } from "../server.jsx";
 import { ThemeContext } from "../App.jsx";
 import turnIntoEuro from "../utils/turnIntoEuro.jsx";
+import amountInCart from "../utils/amountInCart.jsx";
 
 export default function BookDetails() {
   const [book, setBook] = React.useState([]);
@@ -43,6 +44,7 @@ export default function BookDetails() {
                 ? "Erneut hinzufügen"
                 : "In den Warenkorb"}
             </button>
+            <p>{shoppingCart.find((item) => item.id === book.id) && "Im Warenkorb: " + amountInCart(book, shoppingCart)}</p>
             <p className="bookdetails-genre">
               <span className="font-weight-800">Genre:</span> {book.genre}
             </p>
@@ -92,6 +94,7 @@ export default function BookDetails() {
                 ? "Erneut hinzufügen"
                 : "In den Warenkorb"}
             </button>
+            <p>{shoppingCart.find((item) => item.id === book.id) && "Im Warenkorb: " + amountInCart(book, shoppingCart)}</p>
             <p className="bookdetails-genre">
               <span className="font-weight-800">Genre:</span> {book.genre}
             </p>
