@@ -1,4 +1,3 @@
-import React from "react";
 import emptyBook from "../images/old-book.png"
 
 export default function About() {
